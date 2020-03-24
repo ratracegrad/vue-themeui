@@ -43,8 +43,7 @@ const routes = [
   {
     path: "/lora",
     name: "Lora",
-    component: () =>
-        import(/* webpackChunkName: "lora" */ "../views/Lora.vue")
+    component: () => import(/* webpackChunkName: "lora" */ "../views/Lora.vue")
   }
 ];
 
