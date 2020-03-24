@@ -58,12 +58,12 @@
           <li>
             <router-link to="/">Intro</router-link>
           </li>
-          <li><router-link to="/fonts">Fonts</router-link>></li>
-          <li><router-link to="/categories">Type categories</router-link>></li>
-          <li><router-link to="/typography">Typography</router-link>></li>
+          <li><router-link to="/fonts">Fonts</router-link></li>
+          <li><router-link to="/categories">Type categories</router-link></li>
+          <li><router-link to="/typography">Typography</router-link></li>
 
-          <li><router-link to="/sizing">Type sizing</router-link>></li>
-          <li><router-link to="/spacing">Spacing</router-link>></li>
+          <li><router-link to="/sizing">Type sizing</router-link></li>
+          <li><router-link to="/spacing">Spacing</router-link></li>
         </ul>
       </nav>
     </aside>
@@ -76,10 +76,8 @@
       </p>
       <div>
         <router-link to="/fonts" style="text-decoration: none;">
-          <res-button design="primary"
-            ><button>Get Started</button></res-button
-          > </router-link
-        >>
+          <res-button design="primary"><button>Get Started</button></res-button>
+        </router-link>
       </div>
     </section>
   </main>

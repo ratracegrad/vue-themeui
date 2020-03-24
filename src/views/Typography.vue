@@ -58,9 +58,9 @@
           <li>
             <router-link to="/">Intro</router-link>
           </li>
-          <li><router-link to="/fonts">Fonts</router-link>></li>
-          <li><router-link to="/categories">Type categories</router-link>></li>
-          <li><router-link to="/typography">Typography</router-link>></li>
+          <li><router-link to="/fonts">Fonts</router-link></li>
+          <li><router-link to="/categories">Type categories</router-link></li>
+          <li><router-link to="/typography">Typography</router-link></li>
 
           <li>
             <router-link to="/typography" class="active-sub sub"
@@ -72,8 +72,8 @@
             <router-link to="/lora" class="active-bg sub">Lora</router-link>
           </li>
 
-          <li><router-link to="/sizing">Type sizing</router-link>></li>
-          <li><router-link to="/spacing">Spacing</router-link>></li>
+          <li><router-link to="/sizing">Type sizing</router-link></li>
+          <li><router-link to="/spacing">Spacing</router-link></li>
         </ul>
       </nav>
     </aside>
