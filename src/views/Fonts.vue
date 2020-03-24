@@ -261,7 +261,6 @@
             ><button>Next</button></res-button
           ></router-link
         >
-        >
       </div>
     </section>
   </main>

@@ -168,12 +168,10 @@
       <div>
         <router-link to="#" style="text-decoration: none;"
         ><res-button design="primary"><button>Save</button></res-button></router-link>
-        >
         <router-link to="/lora" style="text-decoration: none;"
           ><res-button design="secondary"
             ><button>Next</button></res-button
           ></router-link
-        >
         >
       </div>
     </section>

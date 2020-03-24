@@ -102,7 +102,6 @@
               >Edit Scale</res-badge
             ></router-link
           >
-          >
         </h3>
         <p>Based on: Minor Third: 1.125 Base font size = 18 (1.125em)</p>
         <p><router-link to="#">Example</router-link></p>
