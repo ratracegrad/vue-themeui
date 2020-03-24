@@ -39,6 +39,12 @@ const routes = [
     name: "Spacing",
     component: () =>
       import(/* webpackChunkName: "spacing" */ "../views/Spacing.vue")
+  },
+  {
+    path: "/lora",
+    name: "Lora",
+    component: () =>
+        import(/* webpackChunkName: "lora" */ "../views/Lora.vue")
   }
 ];
 
