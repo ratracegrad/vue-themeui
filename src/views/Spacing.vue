@@ -170,7 +170,6 @@
                     style="vertical-align: middle; margin-left: 8px; cursor: pointer;"
                     >Edit Scale</res-badge
                   ></router-link
-                >
                 ></label
               >
               <res-dropdown for="spacing-medium-tooltip"

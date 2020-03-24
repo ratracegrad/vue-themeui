@@ -379,7 +379,9 @@
       </div>
 
       <router-link to="spacing.html" style="text-decoration: none;"
-      ><res-button design="secondary"><button>Next</button></res-button></router-link>
+        ><res-button design="secondary"
+          ><button>Next</button></res-button
+        ></router-link
       >
     </section>
   </main>

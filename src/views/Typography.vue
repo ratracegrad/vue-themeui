@@ -66,7 +66,6 @@
             <router-link to="/typography" class="active-sub sub"
               ><strong>Graphik</strong></router-link
             >
-            >
           </li>
           <li>
             <router-link to="/lora" class="active-bg sub">Lora</router-link>
