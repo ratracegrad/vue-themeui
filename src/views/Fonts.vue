@@ -55,7 +55,7 @@
           </defs>
         </svg>
         <ul>
-          <li><router-link to="/home">Intro</router-link></li>
+          <li><router-link to="/">Intro</router-link></li>
           <li><router-link to="/fonts" class="active">Fonts</router-link></li>
           <li><router-link to="/categories">Type categories</router-link></li>
           <li><router-link to="/typography">Typography</router-link></li>
