@@ -56,24 +56,14 @@
         </svg>
         <ul>
           <li>
-            <a href="/home" class="active">Intro</a>
+            <router-link to="/">Intro</router-link>
           </li>
-          <li>
-            <a href="/fonts">Fonts</a>
-          </li>
-          <li>
-            <a href="/categories">Type categories</a>
-          </li>
-          <li>
-            <a href="/typography">Typography</a>
-          </li>
+          <li><router-link to="/fonts">Fonts</router-link>></li>
+          <li><router-link to="/categories">Type categories</router-link>></li>
+          <li><router-link to="/typography">Typography</router-link>></li>
 
-          <li>
-            <a href="/sizing">Type sizing</a>
-          </li>
-          <li>
-            <a href="/spacing">Spacing</a>
-          </li>
+          <li><router-link to="/sizing">Type sizing</router-link>></li>
+          <li><router-link to="/spacing">Spacing</router-link>></li>
         </ul>
       </nav>
     </aside>
@@ -85,9 +75,11 @@
         theme.
       </p>
       <div>
-        <a href="/fonts" style="text-decoration: none;">
-          <res-button design="primary"><button>Get Started</button></res-button>
-        </a>
+        <router-link to="/fonts" style="text-decoration: none;">
+          <res-button design="primary"
+            ><button>Get Started</button></res-button
+          > </router-link
+        >>
       </div>
     </section>
   </main>

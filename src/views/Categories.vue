@@ -2,9 +2,9 @@
   <span>
     <header class="c-header">
       <h1 class="t-header">
-        <a href="/home"
+        <router-link to="/home"
           ><img src="res-logo.svg" class="c-logo" />Harmony Design System: Theme
-          Builder</a
+          Builder</router-link
         >
       </h1>
     </header>
@@ -66,24 +66,16 @@
           </svg>
           <ul>
             <li>
-              <a href="/home">Intro</a>
+              <router-link to="/">Intro</router-link>
             </li>
+            <li><router-link to="/fonts">Fonts</router-link>></li>
             <li>
-              <a href="/fonts">Fonts</a>
+              <router-link to="/categories">Type categories</router-link>>
             </li>
-            <li>
-              <a href="/categories" class="active">Type categories</a>
-            </li>
-            <li>
-              <a href="/typography">Typography</a>
-            </li>
+            <li><router-link to="/typography">Typography</router-link>></li>
 
-            <li>
-              <a href="/sizing">Type sizing</a>
-            </li>
-            <li>
-              <a href="/spacing">Spacing</a>
-            </li>
+            <li><router-link to="/sizing">Type sizing</router-link>></li>
+            <li><router-link to="/spacing">Spacing</router-link>></li>
           </ul>
         </nav>
       </aside>
@@ -156,10 +148,10 @@
 
         <div>
           <res-button design="primary"><button>Save</button></res-button>
-          <a href="/typography" style="text-decoration: none;"
+          <router-link to="/typography" style="text-decoration: none;"
             ><res-button design="secondary"
               ><button>Next</button></res-button
-            ></a
+          ></router-link>
           >
         </div>
       </section>
