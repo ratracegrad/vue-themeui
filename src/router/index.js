@@ -44,6 +44,12 @@ const routes = [
     path: "/lora",
     name: "Lora",
     component: () => import(/* webpackChunkName: "lora" */ "../views/Lora.vue")
+  },
+  {
+    path: "/menu1",
+    name: "Menu1",
+    component: () =>
+      import(/* webpackChunkName: "menu1" */ "../views/Menu1.vue")
   }
 ];
 

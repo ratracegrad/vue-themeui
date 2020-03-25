@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <main class="l-main">
-      <app-navigation></app-navigation>
+      <app-navigation v-if="this.$route.path !== 'menu1'"></app-navigation>
       <router-view />
     </main>
   </div>
@@ -12,6 +12,11 @@ import AppNavigation from "@/components/app-navigation";
 export default {
   components: {
     AppNavigation
+  },
+  watch: {
+    $route(to, from) {
+      console.log(to, from);
+    }
   }
 };
 </script>
@@ -22,8 +27,4 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
 }
-
-/*.router-link-exact-active {*/
-/*  background-color: #fff3c2;*/
-/*}*/
 </style>
