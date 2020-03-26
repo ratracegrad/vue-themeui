@@ -29,76 +29,51 @@
 
       <v-stepper-items>
         <v-stepper-content step="1">
-          <!--          <v-card class="mb-12" color="grey lighten-1" height="200px">-->
-          <!--          </v-card>-->
           <Intro></Intro>
-          <v-toolbar color="transparent" flat>
-            <v-btn color="primary" @click="e1 = 2">
-              Continue
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn outlined color="primary">Save</v-btn>
-          </v-toolbar>
+          <ContinueButton
+            v-bind:nextStep="2"
+            v-on:setStep="setThisStep"
+          ></ContinueButton>
         </v-stepper-content>
 
         <v-stepper-content step="2">
-          <!--          <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>-->
           <Fonts></Fonts>
-          <v-toolbar color="transparent" flat>
-            <v-btn color="primary" @click="e1 = 3">
-              Continue
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn outlined color="primary">Save</v-btn>
-          </v-toolbar>
+          <ContinueButton
+            v-bind:nextStep="3"
+            v-on:setStep="setThisStep"
+          ></ContinueButton>
         </v-stepper-content>
 
         <v-stepper-content step="3">
-          <!--          <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>-->
           <Categories></Categories>
-          <v-toolbar color="transparent" flat>
-            <v-btn color="primary" @click="e1 = 4">
-              Continue
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn outlined color="primary">Save</v-btn>
-          </v-toolbar>
+          <ContinueButton
+            v-bind:nextStep="4"
+            v-on:setStep="setThisStep"
+          ></ContinueButton>
         </v-stepper-content>
 
         <v-stepper-content step="4">
-          <!--          <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>-->
           <Typography></Typography>
-          <v-toolbar color="transparent" flat>
-            <v-btn color="primary" @click="e1 = 5">
-              Continue
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn outlined color="primary">Save</v-btn>
-          </v-toolbar>
+          <ContinueButton
+            v-bind:nextStep="5"
+            v-on:setStep="setThisStep"
+          ></ContinueButton>
         </v-stepper-content>
 
         <v-stepper-content step="5">
-          <!--          <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>-->
           <Sizing></Sizing>
-          <v-toolbar color="transparent" flat>
-            <v-btn color="primary" @click="e1 = 6">
-              Continue
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn outlined color="primary">Save</v-btn>
-          </v-toolbar>
+          <ContinueButton
+            v-bind:nextStep="6"
+            v-on:setStep="setThisStep"
+          ></ContinueButton>
         </v-stepper-content>
 
         <v-stepper-content step="6">
-          <!--          <v-card class="mb-12" color="grey lighten-1" height="200px"></v-card>-->
           <Spacing></Spacing>
-          <v-toolbar color="transparent" flat>
-            <v-btn color="primary" @click="e1 = 1">
-              Continue
-            </v-btn>
-            <v-spacer></v-spacer>
-            <v-btn outlined color="primary">Save</v-btn>
-          </v-toolbar>
+          <ContinueButton
+            v-bind:nextStep="1"
+            v-on:setStep="setThisStep"
+          ></ContinueButton>
         </v-stepper-content>
       </v-stepper-items>
     </v-stepper>
@@ -112,6 +87,7 @@ import Categories from "@/components/Categories";
 import Typography from "@/components/Typography";
 import Sizing from "@/components/Sizing";
 import Spacing from "@/components/Spacing";
+import ContinueButton from "@/components/NextStep";
 
 export default {
   name: "Menu2",
@@ -126,7 +102,14 @@ export default {
     Categories,
     Typography,
     Sizing,
-    Spacing
+    Spacing,
+    ContinueButton
+  },
+  methods: {
+    setThisStep(step) {
+      // console.log(`step: ${evt}`)
+      this.e1 = step;
+    }
   }
 };
 </script>
