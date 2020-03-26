@@ -14,6 +14,7 @@
         <li><router-link to="/spacing">Spacing</router-link></li>
         <v-divider></v-divider>
         <li><router-link to="/menu1">Menu 1</router-link></li>
+        <li><router-link to="/menu2">Menu 2</router-link></li>
       </ul>
     </nav>
   </aside>

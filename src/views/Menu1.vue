@@ -1,6 +1,11 @@
 <template>
   <v-app>
-    <v-navigation-drawer disable-resize-watcher app v-model="drawer" class="hidden-md-and-up">
+    <v-navigation-drawer
+      disable-resize-watcher
+      app
+      v-model="drawer"
+      class="hidden-md-and-up"
+    >
       <v-list dense>
         <v-list-item link>
           <v-list-item-content>
@@ -35,7 +40,12 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-navigation-drawer app clipped v-model="drawerLarge" class="hidden-sm-and-down ">
+    <v-navigation-drawer
+      app
+      clipped
+      v-model="drawerLarge"
+      class="hidden-sm-and-down "
+    >
       <v-list dense>
         <v-list-item link>
           <v-list-item-content>
@@ -70,7 +80,7 @@
       </v-list>
     </v-navigation-drawer>
 
-    <v-app-bar  app flat dark>
+    <v-app-bar app flat dark>
       <ChorusLogoWhite></ChorusLogoWhite>
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon
@@ -90,10 +100,14 @@
                 <v-spacer></v-spacer>
               </v-toolbar>
               <v-card-text>
-                <p class="subtitle-1">This shows having a menu on side that disappears on smaller
-                screens and hamburger menu appears. Clicking on hamburger
-                  menu shows a slide-in sidebar.</p>
-                <p class="subtitle-1">Resize the screen to see this in action.</p>
+                <p class="subtitle-1">
+                  This shows having a menu on side that disappears on smaller
+                  screens and hamburger menu appears. Clicking on hamburger menu
+                  shows a slide-in sidebar.
+                </p>
+                <p class="subtitle-1">
+                  Resize the screen to see this in action.
+                </p>
               </v-card-text>
             </v-card>
           </v-col>
