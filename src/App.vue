@@ -1,10 +1,11 @@
 <template>
-  <div id="app">
-    <main class="l-main">
-      <app-navigation v-if="this.$route.path !== 'menu1'"></app-navigation>
+  <span id="app">
+    <main class="l-main" v-if="!this.$route.path.includes('menu')">
+      <app-navigation></app-navigation>
       <router-view />
     </main>
-  </div>
+    <router-view v-else></router-view>
+  </span>
 </template>
 
 <script>
@@ -12,11 +13,6 @@ import AppNavigation from "@/components/app-navigation";
 export default {
   components: {
     AppNavigation
-  },
-  watch: {
-    $route(to, from) {
-      console.log(to, from);
-    }
   }
 };
 </script>
@@ -25,6 +21,5 @@ export default {
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
 }
 </style>
