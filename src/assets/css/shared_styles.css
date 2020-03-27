@@ -56,6 +56,11 @@ a {
     color: #003e65;
 }
 
+p {
+    margin-bottom: 16px;
+    font-size: 15px;
+}
+
 .chorus-logo {
     margin-left: 18px;
     margin-bottom: 12px;
@@ -118,12 +123,53 @@ a {
     padding: 12px 24px;
 }
 
+.c-tabs {
+    display: flex;
+}
+
+.c-tabs button {
+    padding: 12px;
+    border-top: 1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    border-right: 0px;
+    border-bottom: 0px;
+}
+
+.c-tabs button:nth-child(2) {
+    border-right: 1px solid #e0e0e0;
+}
+
+.c-tab-panel {
+    border: 1px solid #e0e0e0;
+    padding: 24px;
+}
+
+
 .active {
     background-color: #fff3c2;
 }
 
+.active-sub {
+    background-color: #ffe068;
+}
+
+
+
+.active-bg {
+    background-color: #fffdf5;
+}
+
 .c-nav ul a:hover {
     background-color: #fff3c2;
+}
+
+.c-nav ul a.active-sub:hover {
+    background-color: #ffe068;
+}
+
+.c-nav .sub {
+    font-size: 13px;
+    padding-left: 52px;
 }
 
 .c-panel {
@@ -138,11 +184,26 @@ a {
 }
 
 .l-content {
-    max-width: 724px;
+    max-width: 768px;
     flex-grow: 1;
     padding: 24px 24px 100px;
     width: 1px;
     margin: 0 auto;
+}
+
+.c-tab {
+    color: #737373;
+    margin-right: 1rem;
+    font-size: 13px;
+}
+
+.c-tab-active {
+    font-weight: 600;
+}
+
+.c-typography-text {
+    margin-left: 12px;
+    margin-top: auto;
 }
 
 .res-icon {
@@ -151,6 +212,10 @@ a {
 
 .margin-lg {
     margin-bottom: 32px;
+}
+
+.margin-sm {
+    margin-bottom: 8px;
 }
 
 .flex-center {

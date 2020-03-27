@@ -10,7 +10,7 @@
         <li><router-link to="/categories">Type categories</router-link></li>
         <li><router-link to="/typography">Typography</router-link></li>
 
-        <li><router-link to="/sizing">Type sizing</router-link></li>
+        <li><router-link to="/typesizing">Type sizing</router-link></li>
         <li><router-link to="/spacing">Spacing</router-link></li>
         <v-divider></v-divider>
         <li><router-link to="/menu1">Menu 1</router-link></li>

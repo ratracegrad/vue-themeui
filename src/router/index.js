@@ -29,10 +29,16 @@ const routes = [
       import(/* webpackChunkName: "typography" */ "../views/Typography.vue")
   },
   {
-    path: "/sizing",
-    name: "Sizing",
+    path: "/typesizing",
+    name: "Type Sizing",
     component: () =>
-      import(/* webpackChunkName: "sizing" */ "../views/Sizing.vue")
+      import(/* webpackChunkName: "sizing" */ "../views/TypeSizing.vue")
+  },
+  {
+    path: "/edittypescale",
+    name: "Edit Type Scale",
+    component: () =>
+      import(/* webpackChunkName: "sizing" */ "../views/EditTypeScale.vue")
   },
   {
     path: "/spacing",

@@ -9,12 +9,13 @@
       <h3>Line Heights</h3>
       <div class="flex margin-lg">
         <res-input
+          ><label>Tight</label
           ><input
             type="text"
             :placeholder="lineHeight.tight"
-            v-model="lineHeight.tight"
-          /><label>Tight</label></res-input
+            v-model="lineHeight.tight"/></res-input
         ><span
+          class="c-typography-text"
           style="font-size:24px;"
           v-bind:style="{ lineHeight: lineHeight.tight }"
           >This line height applies to larger font sizes, such as those used in
@@ -24,12 +25,13 @@
       </div>
       <div class="flex margin-lg">
         <res-input
+          ><label>Medium</label
           ><input
             type="text"
             :placeholder="lineHeight.medium"
-            v-model="lineHeight.medium"
-          /><label>Medium</label></res-input
+            v-model="lineHeight.medium"/></res-input
         ><span
+          class="c-typography-text"
           style="font-size:16px;"
           v-bind:style="{ lineHeight: lineHeight.medium }"
           >This line height applies to medium font sizes. Here's some sample
@@ -40,12 +42,13 @@
       </div>
       <div class="flex margin-lg">
         <res-input
+          ><label>Loose</label
           ><input
             type="text"
             :placeholder="lineHeight.loose"
-            v-model="lineHeight.loose"
-          /><label>Loose</label></res-input
+            v-model="lineHeight.loose"/></res-input
         ><span
+          class="c-typography-text"
           style="font-size:12px;"
           v-bind:style="{ lineHeight: lineHeight.loose }"
           >This line height applies to small font sizes. Here's some sample text
@@ -56,12 +59,13 @@
       </div>
       <div class="flex margin-lg">
         <res-input
+          ><label>Body</label
           ><input
             type="text"
             :placeholder="lineHeight.body"
-            v-model="lineHeight.body"
-          /><label>Body</label></res-input
+            v-model="lineHeight.body"/></res-input
         ><span
+          class="c-typography-text"
           style="font-size:16px;"
           v-bind:style="{ lineHeight: lineHeight.body }"
           >This line height applies to the body copy in an article, which we
@@ -72,12 +76,13 @@
       <h3>Letterspacing</h3>
       <div class="flex margin-lg">
         <res-input
+          ><label>Default</label
           ><input
             type="text"
             :placeholder="letterSpacing.default"
-            v-model="letterSpacing.default"
-          /><label>Default</label></res-input
+            v-model="letterSpacing.default"/></res-input
         ><span
+          class="c-typography-text"
           style="font-size:16px;"
           v-bind:style="{ letterSpacing: letterSpacing.default }"
           >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -86,12 +91,13 @@
       </div>
       <div class="flex margin-lg">
         <res-input
+          ><label>Caps</label
           ><input
             type="text"
             :placeholder="letterSpacing.caps"
-            v-model="letterSpacing.caps"
-          /><label>Caps</label></res-input
+            v-model="letterSpacing.caps"/></res-input
         ><span
+          class="c-typography-text"
           style="font-size:12px;text-transform:uppercase;"
           v-bind:style="{ letterSpacing: letterSpacing.caps }"
           >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -100,12 +106,13 @@
       </div>
       <div class="flex margin-lg">
         <res-input
+          ><label>Expressive</label
           ><input
             type="text"
             :placeholder="letterSpacing.expressive"
-            v-model="letterSpacing.expressive"
-          /><label>Expressive</label></res-input
+            v-model="letterSpacing.expressive"/></res-input
         ><span
+          class="c-typography-text"
           style="font-size:16px;"
           v-bind:style="{ letterSpacing: letterSpacing.expressive }"
           >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
