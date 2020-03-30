@@ -4,6 +4,9 @@ import router from "./router";
 import "./plugins/resonance";
 import "./assets/css/shared_styles.css";
 import vuetify from "./plugins/vuetify";
+import myAxios from "./plugins/axios";
+
+Vue.use(myAxios);
 
 Vue.config.productionTip = false;
 

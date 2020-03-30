@@ -245,10 +245,8 @@
 </template>
 
 <script>
-import * as axios from "axios";
 
-// const BASE_URL = "http://localhost:5000";
-const BASE_URL = "https://themui-backend.herokuapp.com";
+
 const STATUS_INITIAL = 0,
   STATUS_SAVING = 1,
   STATUS_SUCCESS = 2,
@@ -315,10 +313,10 @@ export default {
       this.save(formData);
     },
     upload(formData) {
-      const url = `${BASE_URL}/upload`;
+      const url = `/upload`;
       console.log(`url: ${url}`);
       return (
-        axios
+        this.$axios
           .post(url, formData)
           // get data
           .then(x => {
@@ -330,7 +328,7 @@ export default {
           .then(x => {
             console.log("2nd then");
             return Object.assign({}, x.file, {
-              url: `${BASE_URL}/uploads/${x.filename}`
+              url: `/uploads/${x.filename}`
             });
             // x.map(img => {
             //   console.log('===== img');
