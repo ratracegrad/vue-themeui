@@ -234,12 +234,18 @@
 
     <hr />
 
-    <div>
-      <router-link to="/categories" style="text-decoration: none;"
+    <div class="c-buttons">
+      <router-link to="/" style="text-decoration: none;"
+        ><res-button style="margin-right: 8px;" design="secondary"
+                ><button>Back</button></res-button></router-link>
+      <router-link to="/typesizing" style="text-decoration: none;"
         ><res-button design="secondary"
           ><button>Next</button></res-button
         ></router-link
       >
+
+
+
     </div>
   </section>
 </template>

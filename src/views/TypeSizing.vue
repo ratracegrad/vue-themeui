@@ -167,11 +167,16 @@
       </p>
     </div>
 
-    <router-link to="/spacing" style="text-decoration: none;"
-      ><res-button design="secondary"
-        ><button>Next</button></res-button
-      ></router-link
-    >
+    <div class="c-buttons">
+          <router-link to="fonts" style="text-decoration: none;"
+            ><res-button style="margin-right: 8px;" design="secondary"
+                    ><button>Back</button></res-button></router-link>
+          <router-link to="/typography" style="text-decoration: none;"
+            ><res-button design="secondary"
+              ><button>Next</button></res-button
+            ></router-link
+          >
+        </div>
   </section>
 </template>
 

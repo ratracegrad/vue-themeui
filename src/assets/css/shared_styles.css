@@ -123,6 +123,41 @@ p {
     padding: 12px 24px;
 }
 
+
+.c-nav ul li:hover {
+    background-color: #fff3c2;
+}
+
+.c-nav ul a.active-sub:hover {
+    background-color: #ffe068;
+}
+
+.c-nav .sub {
+    font-size: 13px;
+    background-color: #fffdf5;
+}
+
+.c-nav .sub a {
+    padding-left: 32px;
+}
+
+.c-nav .sub-sub a {
+    padding-left: 64px;
+}
+
+.c-nav .expandable {
+    background-color: #fff3c2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px;
+}
+
+.c-nav .sub.expandable {
+    padding-left: 32px;
+    background-color: #fff3c2;
+}
+
 .c-tabs {
     display: flex;
 }
@@ -144,33 +179,6 @@ p {
     padding: 24px;
 }
 
-
-.active {
-    background-color: #fff3c2;
-}
-
-.active-sub {
-    background-color: #ffe068;
-}
-
-
-
-.active-bg {
-    background-color: #fffdf5;
-}
-
-.c-nav ul a:hover {
-    background-color: #fff3c2;
-}
-
-.c-nav ul a.active-sub:hover {
-    background-color: #ffe068;
-}
-
-.c-nav .sub {
-    font-size: 13px;
-    padding-left: 52px;
-}
 
 .c-panel {
     border: 1px solid #e0e0e0;
@@ -204,6 +212,15 @@ p {
 .c-typography-text {
     margin-left: 12px;
     margin-top: auto;
+}
+
+.c-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.c-buttons-save {
+    justify-content: space-between;
 }
 
 .res-icon {

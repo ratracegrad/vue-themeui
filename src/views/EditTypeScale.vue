@@ -170,10 +170,12 @@
         </table>
       </res-table>
     </div>
-    <res-button design="primary"><button>Save</button></res-button>
+    <div class="c-buttons c-buttons-save">
+    <res-button design="primary" style="margin-right: 8px"><button>Save</button></res-button>
     <router-link to="/typesizing" style="text-decoration: none;">
         <res-button design="secondary"><button>Back</button></res-button>
     </router-link>
+  </div>
   </section>
 </template>
 <script>
