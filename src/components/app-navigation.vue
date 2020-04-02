@@ -72,6 +72,5 @@ export default {
 <style>
 .router-link-exact-active {
   font-weight: bold;
-  background-color: #ffe068;
 }
 </style>

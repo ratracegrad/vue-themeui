@@ -124,7 +124,7 @@ p {
 }
 
 
-.c-nav ul li:hover {
+.c-nav ul li a:hover {
     background-color: #fff3c2;
 }
 
@@ -138,15 +138,15 @@ p {
 }
 
 .c-nav .sub a {
-    padding-left: 32px;
+    padding-left: 42px;
 }
 
 .c-nav .sub-sub a {
-    padding-left: 64px;
+    padding-left: 68px;
 }
 
 .c-nav .expandable {
-    background-color: #fff3c2;
+    background-color: #FDCB28;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -154,7 +154,7 @@ p {
 }
 
 .c-nav .sub.expandable {
-    padding-left: 32px;
+    padding-left: 42px;
     background-color: #fff3c2;
 }
 
