@@ -321,19 +321,19 @@ export default {
     },
     upload(formData) {
       const url = `${BASE_URL}/upload`;
-      console.log(`url: ${url}`);
+      // console.log(`url: ${url}`);
       return (
         axios
           .post(url, formData)
           // get data
           .then(x => {
-            console.log("------ x");
-            console.log(x);
+            // console.log("------ x");
+            // console.log(x);
             return x.data;
           })
           // add url field
           .then(x => {
-            console.log("2nd then");
+            // console.log("2nd then");
             return Object.assign({}, x.file, {
               url: `${BASE_URL}/uploads/${x.filename}`
             });
