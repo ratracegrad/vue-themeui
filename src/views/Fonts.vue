@@ -86,7 +86,7 @@
           <label
             >Include from URL (url from Google, Hoefler, Typekit, etc)</label
           >
-          <input type="text" />
+          <input type="file" />
           <res-button slot="outer-right" design="primary"
             ><button>Submit</button></res-button
           >
@@ -237,15 +237,14 @@
     <div class="c-buttons">
       <router-link to="/" style="text-decoration: none;"
         ><res-button style="margin-right: 8px;" design="secondary"
-                ><button>Back</button></res-button></router-link>
+          ><button>Back</button></res-button
+        ></router-link
+      >
       <router-link to="/typesizing" style="text-decoration: none;"
         ><res-button design="secondary"
           ><button>Next</button></res-button
         ></router-link
       >
-
-
-
     </div>
   </section>
 </template>

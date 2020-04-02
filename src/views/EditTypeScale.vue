@@ -18,7 +18,7 @@
               <th>Name</th>
               <th>wide: &gt;1400</th>
               <th>mid: &gt;1400</th>
-              <th>narrow: &lt;650 </th>
+              <th>narrow: &lt;650</th>
             </tr>
           </thead>
           <tbody>
@@ -171,11 +171,13 @@
       </res-table>
     </div>
     <div class="c-buttons c-buttons-save">
-    <res-button design="primary" style="margin-right: 8px"><button>Save</button></res-button>
-    <router-link to="/typesizing" style="text-decoration: none;">
+      <res-button design="primary" style="margin-right: 8px"
+        ><button>Save</button></res-button
+      >
+      <router-link to="/typesizing" style="text-decoration: none;">
         <res-button design="secondary"><button>Back</button></res-button>
-    </router-link>
-  </div>
+      </router-link>
+    </div>
   </section>
 </template>
 <script>

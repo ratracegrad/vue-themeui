@@ -75,9 +75,13 @@
           ></router-link
         >
 
-        <res-pagination count="100" display="10" indicator="range" pagination="nav-only-toggle" navigation="text"></res-pagination>
-
-        
+        <res-pagination
+          count="100"
+          display="10"
+          indicator="range"
+          pagination="nav-only-toggle"
+          navigation="text"
+        ></res-pagination>
       </div>
     </section>
   </main>
