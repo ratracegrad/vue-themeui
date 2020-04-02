@@ -125,7 +125,7 @@ p {
 }
 
 
-.c-nav ul li a:hover {
+.c-nav ul li:hover {
     background-color: #fff3c2;
 }
 
@@ -135,7 +135,6 @@ p {
 
 .c-nav .sub {
     font-size: 13px;
-    background-color: #fffdf5;
 }
 
 .c-nav .sub a {
@@ -147,7 +146,6 @@ p {
 }
 
 .c-nav .expandable {
-    background-color: #FDCB28;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -156,7 +154,6 @@ p {
 
 .c-nav .sub.expandable {
     padding-left: 42px;
-    background-color: #fff3c2;
 }
 
 .c-tabs {
@@ -258,12 +255,12 @@ p {
     margin-bottom: 16px;
 }
 
-.show {
-    display: block;
+.typography-list, .characters-list, .tokens-list, .colors-list {
+    display: none;
 }
 
-.hide {
-    display: none;
+.show {
+    display: block;
 }
 
 .flex {
