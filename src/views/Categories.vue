@@ -72,7 +72,7 @@
       >
       <div>
         <router-link
-          to="/lora"
+          to="/typography"
           style="text-decoration: none; margin-right: 8px"
         >
           <res-button design="secondary"><button>Back</button></res-button>

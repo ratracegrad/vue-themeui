@@ -14,15 +14,10 @@
           <li class="sub"><router-link to="/fonts">Fonts</router-link></li>
           <li class="sub"><router-link to="/typesizing">Sizes</router-link></li>
 
-          <li class="sub expandable" v-on:click="expandCharacterMetricsMenu">
-            Character Metrics<res-icon name="down" size="small" v-show="!expandCharacters"></res-icon> <res-icon name="up" size="small" v-show="expandCharacters"></res-icon>
+          <li class="sub">
+            <router-link to="typography">Character Metrics</router-link>
           </li>
-          <div v-bind:class="{ show: expandCharacters }" class="characters-list">
-            <li class="sub sub-sub">
-              <router-link to="typography">Graphik</router-link>
-            </li>
-            <li class="sub sub-sub"><router-link to="lora">Lora</router-link></li>
-          </div>
+    
 
 
           <li class="sub expandable" v-on:click="expandTokensMenu">
@@ -73,7 +68,6 @@ export default {
   data: function () {
     return {
       expandTypography: false,
-      expandCharacters: false,
       expandTokens: false,
       expandColors: false
     }
@@ -84,13 +78,6 @@ export default {
         this.expandTypography = false
       } else {
         this.expandTypography = true
-      }
-    },
-    expandCharacterMetricsMenu: function() {
-      if(this.expandCharacters){
-        this.expandCharacters = false
-      } else {
-        this.expandCharacters = true
       }
     },
     expandTokensMenu: function() {
