@@ -1,6 +1,6 @@
 <template>
   <section class="l-content l-content-typography">
-    <h2>Character Metrics</h2>
+    <h1>Character Spacing</h1>
     <p>Set the values associated with your chosen fonts.</p>
     <div class="c-tab-nav margin-xl">
       <span class="c-tab">Jump to:</span>
@@ -347,7 +347,7 @@
 
     <hr>
 
-    <div class="flex" style="justify-content: flex-end;">
+    <div class="flex" style="justify-content: center;">
       <router-link
         to="/typesizing"
         style="text-decoration: none; margin-right: 8px"

@@ -15,7 +15,7 @@
           <li class="sub"><router-link to="/typesizing">Sizes</router-link></li>
 
           <li class="sub">
-            <router-link to="typography">Character Metrics</router-link>
+            <router-link to="typography">Character Spacing</router-link>
           </li>
     
 
