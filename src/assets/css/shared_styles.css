@@ -216,12 +216,12 @@ p {
     flex-grow: 1;
     padding: 24px 24px 100px;
     width: 1px;
-    margin: 0 auto;
+    margin-left: 245px;
 }
 
 .l-content-typography {
     max-width: 1024px;
-    margin-left: 235px;
+    margin-left: 245px;
 }
 
 .l-content-typography label {
