@@ -49,14 +49,21 @@ h1, h2, h3, h4, h5, h6 {
     color: #2b2b2b;
 }
 
+h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
 h2 {
-    font-size: 36px;
+    font-size: 32px;
     margin-bottom: 12px;
 }
 
 h2 span.type-regular {
     font-family: 'Graphik';
     font-weight: normal;
+    color: #737373;;
+    font-size: 24px;
 }
 
 a {
@@ -65,7 +72,7 @@ a {
 
 p {
     margin-bottom: 16px;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .chorus-logo {
@@ -209,11 +216,17 @@ p {
     flex-grow: 1;
     padding: 24px 24px 100px;
     width: 1px;
-    margin: 0 auto;
+    margin-left: 245px;
 }
 
 .l-content-typography {
     max-width: 1024px;
+    margin-left: 245px;
+}
+
+.l-content-typography label {
+    color: #737373;
+    font-size: 14px;
 }
 
 .c-tab {
@@ -224,6 +237,10 @@ p {
 
 .c-tab-active {
     font-weight: 600;
+}
+
+.c-tab-top {
+    text-align: right;
 }
 
 .c-typography-text {

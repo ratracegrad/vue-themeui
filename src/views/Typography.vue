@@ -1,9 +1,9 @@
 <template>
   <section class="l-content l-content-typography">
-    <h2>Character Metrics</h2>
+    <h1>Character Spacing</h1>
     <p>Set the values associated with your chosen fonts.</p>
     <div class="c-tab-nav margin-xl">
-      <span class="c-tab">Jump to:</span>
+      <span class="c-tab" id="top">Jump to:</span>
       <span class="c-tab"><a href="#graphik">Graphik</a></span>
       <span class="c-tab lora-regular"><a href="#lora">Lora</a></span>
     </div>
@@ -168,7 +168,7 @@
 
         </div>
       </div>
-
+      <div class="c-tab c-tab-top"><a href="#top">Return to top</a></div>
     </div>
 
     <div class="c-panel c-panel-typography" id="lora">
@@ -311,7 +311,7 @@
             >
           </div>
 
-          <div class="flex">
+          <div class="flex margin-lg">
             <div style="flex-basis: 25%; display: flex; align-items: baseline;">
               <div class="flex" style="align-items: center; justify-content: space-between;">
                 <label style="justify-content: center; font-weight: bold;">Expressive</label>
@@ -332,6 +332,7 @@
 
         </div>
       </div>
+     <div class="c-tab c-tab-top"><a href="#top">Return to top</a></div>
 
     </div>
 
@@ -347,12 +348,12 @@
 
     <hr>
 
-    <div class="flex" style="justify-content: flex-end;">
+    <div class="flex" style="justify-content: center;">
       <router-link
         to="/typesizing"
         style="text-decoration: none; margin-right: 8px"
       >
-        <res-button design="secondary"><button>Back</button></res-button>
+        <res-button design="secondary"><button>Previous</button></res-button>
       </router-link>
       <router-link to="/categories" style="text-decoration: none;">
         <res-button design="secondary"><button>Next</button></res-button>
