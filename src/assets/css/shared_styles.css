@@ -239,6 +239,10 @@ p {
     font-weight: 600;
 }
 
+.c-tab-top {
+    text-align: right;
+}
+
 .c-typography-text {
     margin-left: 12px;
 }
