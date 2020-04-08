@@ -1,5 +1,5 @@
 <template>
-  <section class="l-content">
+  <section class="l-content l-content-typography">
     <h1>Character Spacing</h1>
     <p>Set the values associated with your chosen fonts.</p>
     <div class="c-tab-nav margin-xl">
