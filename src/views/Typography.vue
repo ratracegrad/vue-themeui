@@ -1,5 +1,5 @@
 <template>
-  <section class="l-content l-content-typography">
+  <section class="l-content">
     <h1>Character Spacing</h1>
     <p>Set the values associated with your chosen fonts.</p>
     <div class="c-tab-nav margin-xl">
@@ -8,7 +8,9 @@
       <span class="c-tab lora-regular"><a href="#lora">Lora</a></span>
     </div>
     <div class="c-panel c-panel-typography" id="graphik">
-      <h2 class="margin-xl" style="margin-top: 0;">Graphik <span class="type-regular">Regular, Bold</span></h2>
+      <h2 class="margin-xl" style="margin-top: 0;">
+        Graphik <span class="type-regular">Regular, Bold</span>
+      </h2>
 
       <div class="flex margin-xl">
         <div style="flex-basis: 25%;">
@@ -418,7 +420,7 @@
       <div class="c-tab c-tab-top"><a href="#top">Return to top</a></div>
     </div>
 
-      <SaveButton :enabled="formUpdated" v-on:save="handleSave"></SaveButton>
+    <SaveButton :enabled="formUpdated" v-on:save="handleSave"></SaveButton>
 
     <hr />
 
@@ -444,21 +446,24 @@ export default {
     SaveButton
   },
   computed: {
-    formUpdated: function(){
-      return this.serializeData() !== this.savedModel
+    formUpdated: function() {
+      return this.serializeData() !== this.savedModel;
     }
   },
-  created: function(){
+  created: function() {
     this.updateSavedModel();
   },
   methods: {
-    serializeData: function(){
-      return JSON.stringify({lineHeight: this.lineHeight, letterSpacing: this.letterSpacing});
+    serializeData: function() {
+      return JSON.stringify({
+        lineHeight: this.lineHeight,
+        letterSpacing: this.letterSpacing
+      });
     },
-    handleSave: function(){
+    handleSave: function() {
       this.updateSavedModel();
     },
-    updateSavedModel: function(){
+    updateSavedModel: function() {
       this.savedModel = this.serializeData();
     }
   },
