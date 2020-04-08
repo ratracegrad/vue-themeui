@@ -8,9 +8,7 @@
       <span class="c-tab lora-regular"><a href="#lora">Lora</a></span>
     </div>
     <div class="c-panel c-panel-typography" id="graphik">
-      <h2 class="margin-xl" style="margin-top: 0;">
-        Graphik <span class="type-regular">Regular, Bold</span>
-      </h2>
+      <h2 class="margin-xl" style="margin-top: 0;">Graphik <span class="type-regular">Regular, Bold</span></h2>
 
       <div class="flex margin-xl">
         <div style="flex-basis: 25%;">
@@ -420,9 +418,7 @@
       <div class="c-tab c-tab-top"><a href="#top">Return to top</a></div>
     </div>
 
-    <div>
-      <res-button design="primary"><button>Save</button></res-button>
-    </div>
+      <SaveButton :enabled="formUpdated" v-on:save="handleSave"></SaveButton>
 
     <hr />
 
@@ -441,8 +437,31 @@
 </template>
 
 <script>
+import SaveButton from "@/components/SaveButton";
 export default {
   name: "Typography",
+  components: {
+    SaveButton
+  },
+  computed: {
+    formUpdated: function(){
+      return this.serializeData() !== this.savedModel
+    }
+  },
+  created: function(){
+    this.updateSavedModel();
+  },
+  methods: {
+    serializeData: function(){
+      return JSON.stringify({lineHeight: this.lineHeight, letterSpacing: this.letterSpacing});
+    },
+    handleSave: function(){
+      this.updateSavedModel();
+    },
+    updateSavedModel: function(){
+      this.savedModel = this.serializeData();
+    }
+  },
   data: () => ({
     lineHeight: {
       tight: 1.1,
@@ -454,7 +473,8 @@ export default {
       default: "0",
       caps: ".04em",
       expressive: ".02em"
-    }
+    },
+    savedModel: ""
   })
 };
 </script>
