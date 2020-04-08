@@ -112,9 +112,8 @@ p {
 .l-sidebar {
     min-width: 225px;
     border-right: 1px solid #e0e0e0;
-    position: fixed;
     overflow-y: auto;
-    height: 100%;
+    height: 100vh;
 }
 
 .c-nav {
@@ -215,9 +214,7 @@ p {
 .l-content {
     max-width: 768px;
     flex-grow: 1;
-    padding: 24px 24px 100px;
-    width: 1px;
-    margin-left: 245px;
+    padding: 0 24px 100px 48px;
 }
 
 .l-content-typography {
