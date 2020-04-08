@@ -23,10 +23,10 @@ export default {
   methods: {
     clickSave: function() {
     	this.saveState = "CONFIRM"
-    	this.$emit("save");
     },
     clickConfirm: function() {
     	this.saveState = "SAVED"
+      this.$emit("save");
     },
     clickCancel: function() {
     	this.saveState = "READY"
