@@ -336,15 +336,7 @@
 
     </div>
 
-
-
-
-    <div>
-      <res-button design="primary"
-        ><button>Save</button></res-button
-      >
-      
-    </div>
+      <SaveButton :enabled="formUpdated" v-on:save="handleSave"></SaveButton>
 
     <hr>
 
@@ -365,8 +357,31 @@
 </template>
 
 <script>
+import SaveButton from "@/components/SaveButton";
 export default {
   name: "Typography",
+  components: {
+    SaveButton
+  },
+  computed: {
+    formUpdated: function(){
+      return this.serializeData() !== this.savedModel
+    }
+  },
+  created: function(){
+    this.updateSavedModel();
+  },
+  methods: {
+    serializeData: function(){
+      return JSON.stringify({lineHeight: this.lineHeight, letterSpacing: this.letterSpacing});
+    },
+    handleSave: function(){
+      this.updateSavedModel();
+    },
+    updateSavedModel: function(){
+      this.savedModel = this.serializeData();
+    }
+  },
   data: () => ({
     lineHeight: {
       tight: 1.1,
@@ -378,7 +393,8 @@ export default {
       default: "0",
       caps: ".04em",
       expressive: ".02em"
-    }
+    },
+    savedModel: ""
   })
 };
 </script>
