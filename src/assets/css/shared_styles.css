@@ -163,6 +163,7 @@ p {
     align-items: center;
     justify-content: space-between;
     padding: 12px 24px;
+    color: #2b2b2b;
 }
 
 .c-nav .sub.expandable {
@@ -212,13 +213,12 @@ p {
 
 .l-content {
     max-width: 768px;
-    flex-grow: 1;
-    padding: 0 24px 100px 48px;
+    margin-left: 50px;
 }
 
 .l-content-typography {
     max-width: 1024px;
-    margin-left: 245px;
+    margin-left: 50px;
 }
 
 .l-content-typography label {
