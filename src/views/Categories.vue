@@ -1,93 +1,97 @@
 <template>
-  <section class="l-content">
-    <h2>Assign your typography</h2>
-    <p>These broad font categories define your theme's typography</p>
-    <div class="c-panel">
-      <res-select
-        ><label
-          >Headings
-          <p>Currently: <strong>Graphik-Regular</strong></p></label
-        >
-        <select name="s1" id="initial-id1"
-          ><option placeholder="">Select font</option
-          ><option value="Graphik-Regular">Graphik-Regular</option
-          ><option value="Graphik-Bold">Graphik-Bold</option
-          ><option value="Lora-Regular">Lora-Regular</option
-          ><option value="Lora-Bold">Lora-Bold</option></select
-        ></res-select
-      >
+    <section class="l-content">
+        <h2>Assign your typography</h2>
+        <p>These broad font categories define your theme's typography</p>
+        <div class="c-panel">
+            <res-select
+                ><label
+                    >Headings
+                    <p>Currently: <strong>Graphik-Regular</strong></p></label
+                >
+                <select name="s1" id="initial-id1"
+                    ><option placeholder="">Select font</option
+                    ><option value="Graphik-Regular">Graphik-Regular</option
+                    ><option value="Graphik-Bold">Graphik-Bold</option
+                    ><option value="Lora-Regular">Lora-Regular</option
+                    ><option value="Lora-Bold">Lora-Bold</option></select
+                ></res-select
+            >
 
-      <hr />
+            <hr />
 
-      <res-select
-        ><label
-          >Body
-          <p>Currently: <strong>Graphik-Regular</strong></p></label
-        >
-        <select name="s1" id="initial-id2"
-          ><option placeholder="">Select font</option
-          ><option value="Graphik-Regular">Graphik-Regular</option
-          ><option value="Graphik-Bold">Graphik-Bold</option
-          ><option value="Lora-Regular">Lora-Regular</option
-          ><option value="Lora-Bold">Lora-Bold</option></select
-        ></res-select
-      >
+            <res-select
+                ><label
+                    >Body
+                    <p>Currently: <strong>Graphik-Regular</strong></p></label
+                >
+                <select name="s1" id="initial-id2"
+                    ><option placeholder="">Select font</option
+                    ><option value="Graphik-Regular">Graphik-Regular</option
+                    ><option value="Graphik-Bold">Graphik-Bold</option
+                    ><option value="Lora-Regular">Lora-Regular</option
+                    ><option value="Lora-Bold">Lora-Bold</option></select
+                ></res-select
+            >
 
-      <hr />
+            <hr />
 
-      <res-select
-        ><label
-          >Meta
-          <p>Currently: <strong>Graphik-Regular</strong></p></label
-        >
-        <select name="s1" id="initial-id3"
-          ><option placeholder="">Select font</option
-          ><option value="Graphik-Regular">Graphik-Regular</option
-          ><option value="Graphik-Bold">Graphik-Bold</option
-          ><option value="Lora-Regular">Lora-Regular</option
-          ><option value="Lora-Bold">Lora-Bold</option></select
-        ></res-select
-      >
+            <res-select
+                ><label
+                    >Meta
+                    <p>Currently: <strong>Graphik-Regular</strong></p></label
+                >
+                <select name="s1" id="initial-id3"
+                    ><option placeholder="">Select font</option
+                    ><option value="Graphik-Regular">Graphik-Regular</option
+                    ><option value="Graphik-Bold">Graphik-Bold</option
+                    ><option value="Lora-Regular">Lora-Regular</option
+                    ><option value="Lora-Bold">Lora-Bold</option></select
+                ></res-select
+            >
 
-      <hr />
+            <hr />
 
-      <res-select
-        ><label
-          >UI
-          <p>Currently: <strong>Graphik-Regular</strong></p></label
-        >
-        <select name="s1" id="initial-id4"
-          ><option placeholder="">Select font</option
-          ><option value="Graphik-Regular">Graphik-Regular</option
-          ><option value="Graphik-Bold">Graphik-Bold</option
-          ><option value="Lora-Regular">Lora-Regular</option
-          ><option value="Lora-Bold">Lora-Bold</option></select
-        ></res-select
-      >
-    </div>
+            <res-select
+                ><label
+                    >UI
+                    <p>Currently: <strong>Graphik-Regular</strong></p></label
+                >
+                <select name="s1" id="initial-id4"
+                    ><option placeholder="">Select font</option
+                    ><option value="Graphik-Regular">Graphik-Regular</option
+                    ><option value="Graphik-Bold">Graphik-Bold</option
+                    ><option value="Lora-Regular">Lora-Regular</option
+                    ><option value="Lora-Bold">Lora-Bold</option></select
+                ></res-select
+            >
+        </div>
 
-    <div class="c-buttons c-buttons-save">
-      <res-button design="primary" style="margin-right: 8px"
-        ><button>Save</button></res-button
-      >
-      <div>
-        <router-link
-          to="/typography"
-          style="text-decoration: none; margin-right: 8px"
-        >
-          <res-button design="secondary"><button>Back</button></res-button>
-        </router-link>
-        <router-link to="/spacing" style="text-decoration: none;">
-          <res-button design="secondary"><button>Next</button></res-button>
-        </router-link>
-      </div>
-    </div>
-  </section>
+        <div class="c-buttons c-buttons-save">
+            <res-button design="primary" style="margin-right: 8px"
+                ><button>Save</button></res-button
+            >
+            <div>
+                <router-link
+                    to="/typography"
+                    style="text-decoration: none; margin-right: 8px"
+                >
+                    <res-button design="secondary"
+                        ><button>Back</button></res-button
+                    >
+                </router-link>
+                <router-link to="/headings" style="text-decoration: none;">
+                    <res-button design="secondary"
+                        ><button>Next</button></res-button
+                    >
+                </router-link>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
 export default {
-  name: "Categories"
+    name: "Categories"
 };
 </script>
 

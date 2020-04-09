@@ -1,4 +1,4 @@
 module.exports = {
-  publicPath: "/vue-themeui/",
-  transpileDependencies: ["vuetify"]
+    publicPath: "/vue-themeui/",
+    transpileDependencies: ["vuetify"]
 };
