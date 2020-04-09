@@ -13,7 +13,7 @@
 
             <div class="flex margin-lg">
                 <div class="col-20">
-                    <h5 style="margin-top: 0; margin-bottom: 4px;">
+                    <h5 class="margin-xxs">
                         Line Height
                     </h5>
                     <p>Set four contexts.</p>
@@ -24,11 +24,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Tight</label
                                 >
                                 <res-input
@@ -40,7 +38,7 @@
                             </div>
                         </div>
                         <span class="col-75"
-                            style="font-size:44px; margin-left: 12px; font-weight: bold;"
+                            style="font-size:44px; font-weight: bold;"
                             v-bind:style="{ lineHeight: lineHeight.tight }"
                             >Tight applies to larger font sizes, like those used
                             in headlines</span
@@ -52,11 +50,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Medium</label
                                 >
                                 <res-input
@@ -68,7 +64,7 @@
                             </div>
                         </div>
                         <span class="col-75"
-                            style="font-size:16px; margin-left: 12px;"
+                            style="font-size:16px;"
                             v-bind:style="{ lineHeight: lineHeight.medium }"
                             >This line height applies to medium font sizes.
                             Here's some sample text for you to test this value.
@@ -83,11 +79,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Loose</label
                                 >
                                 <res-input
@@ -99,7 +93,7 @@
                             </div>
                         </div>
                         <span class="col-75"
-                            style="font-size:12px; margin-left: 12px;"
+                            style="font-size:12px;"
                             v-bind:style="{ lineHeight: lineHeight.loose }"
                             >This line height applies to small font sizes.
                             Here's some sample text for you to test this value.
@@ -114,11 +108,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Body</label
                                 >
                                 <res-input
@@ -130,7 +122,7 @@
                             </div>
                         </div>
                         <span class="col-75"
-                            style="font-size:18px; margin-left: 12px;"
+                            style="font-size:18px;"
                             v-bind:style="{ lineHeight: lineHeight.body }"
                             >This line height applies to the body copy in an
                             article, which we think is a little different than
@@ -143,7 +135,7 @@
 
             <div class="flex margin-lg">
                 <div class="col-20">
-                    <h5 style="margin-top: 0; margin-bottom: 4px;">
+                    <h5 class="margin-xxs">
                         Letterspacing
                     </h5>
                     <p>Set three contexts.</p>
@@ -154,11 +146,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Default</label
                                 >
                                 <res-input
@@ -170,7 +160,7 @@
                             </div>
                         </div>
                         <span
-                            style="font-size:16px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:16px; flex-basis: 75%;"
                             v-bind:style="{
                                 letterSpacing: letterSpacing.default
                             }"
@@ -185,11 +175,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Caps</label
                                 >
                                 <res-input
@@ -201,7 +189,7 @@
                             </div>
                         </div>
                         <span
-                            style="font-size:12px; text-transform:uppercase; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:12px; text-transform:uppercase; flex-basis: 75%;"
                             v-bind:style="{ letterSpacing: letterSpacing.caps }"
                             >Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
@@ -214,11 +202,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Expressive</label
                                 >
                                 <res-input
@@ -230,7 +216,7 @@
                             </div>
                         </div>
                         <span
-                            style="font-size:12px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:12px; flex-basis: 75%;"
                             v-bind:style="{
                                 letterSpacing: letterSpacing.expressive
                             }"
@@ -251,7 +237,7 @@
 
             <div class="flex margin-lg">
                 <div class="col-20">
-                    <h5 style="margin-top: 0; margin-bottom: 4px;">
+                    <h5 class="margin-xxs">
                         Line Height
                     </h5>
                     <p>Set four contexts.</p>
@@ -262,11 +248,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Tight</label
                                 >
                                 <res-input
@@ -279,7 +263,7 @@
                         </div>
                         <span
                             class="lora-bold col-75"
-                            style="font-size:44px; margin-left: 12px; font-weight: bold;"
+                            style="font-size:44px; font-weight: bold;"
                             v-bind:style="{ lineHeight: lineHeight.tight }"
                             >Tight applies to larger font sizes, like those used
                             in headlines</span
@@ -291,11 +275,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Medium</label
                                 >
                                 <res-input
@@ -308,7 +290,7 @@
                         </div>
                         <span
                             class="lora-regular col-75"
-                            style="font-size:16px; margin-left: 12px;"
+                            style="font-size:16px;"
                             v-bind:style="{ lineHeight: lineHeight.medium }"
                             >This line height applies to medium font sizes.
                             Here's some sample text for you to test this value.
@@ -323,11 +305,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Loose</label
                                 >
                                 <res-input
@@ -340,7 +320,7 @@
                         </div>
                         <span
                             class="lora-regular col-75"
-                            style="font-size:12px; margin-left: 12px;"
+                            style="font-size:12px;"
                             v-bind:style="{ lineHeight: lineHeight.loose }"
                             >This line height applies to small font sizes.
                             Here's some sample text for you to test this value.
@@ -355,11 +335,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Body</label
                                 >
                                 <res-input
@@ -372,7 +350,7 @@
                         </div>
                         <span
                             class="lora-regular col-75"
-                            style="font-size:18px; margin-left: 12px;"
+                            style="font-size:18px;"
                             v-bind:style="{ lineHeight: lineHeight.body }"
                             >This line height applies to the body copy in an
                             article, which we think is a little different than
@@ -385,7 +363,7 @@
 
             <div class="flex">
                 <div class="col-20">
-                    <h5 style="margin-top: 0; margin-bottom: 4px;">
+                    <h5 class="margin-xxs">
                         Letterspacing
                     </h5>
                     <p>Set three contexts.</p>
@@ -396,11 +374,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Default</label
                                 >
                                 <res-input
@@ -413,7 +389,7 @@
                         </div>
                         <span
                             class="lora-regular col-75"
-                            style="font-size:16px; margin-left: 12px;"
+                            style="font-size:16px;"
                             v-bind:style="{
                                 letterSpacing: letterSpacing.default
                             }"
@@ -428,11 +404,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Caps</label
                                 >
                                 <res-input
@@ -445,7 +419,7 @@
                         </div>
                         <span
                             class="lora-regular col-75"
-                            style="font-size:12px; text-transform:uppercase; margin-left: 12px;"
+                            style="font-size:12px; text-transform:uppercase;"
                             v-bind:style="{ letterSpacing: letterSpacing.caps }"
                             >Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
@@ -458,11 +432,9 @@
                             class="flex align-base col-25"
                         >
                             <div
-                                class="flex"
-                                style="align-items: center; justify-content: space-between;"
-                            >
+                                class="flex c-typography-form">
                                 <label
-                                    style="justify-content: center; font-weight: bold;"
+                                    
                                     >Expressive</label
                                 >
                                 <res-input
@@ -475,7 +447,7 @@
                         </div>
                         <span
                             class="lora-regular col-75"
-                            style="font-size:12px; margin-left: 12px;"
+                            style="font-size:12px;"
                             v-bind:style="{
                                 letterSpacing: letterSpacing.expressive
                             }"

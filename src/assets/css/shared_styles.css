@@ -257,6 +257,14 @@ p {
 .l-content-typography label {
     color: #737373;
     font-size: 13px;
+    justify-content: center; 
+    font-weight: bold;
+}
+
+.c-typography-form {
+    align-items: center; 
+    justify-content: space-between;
+    margin-right: 12px;
 }
 
 .c-tab {
@@ -299,6 +307,10 @@ p {
 
 /*margin helpers
 */
+
+.margin-xxs {
+    margin-bottom: 4px;
+}
 
 .margin-xs {
     margin-bottom: 8px;
