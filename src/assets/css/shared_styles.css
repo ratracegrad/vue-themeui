@@ -6,22 +6,22 @@
 }
 
 .lora-regular {
-    font-family: Lora;
+    font-family: Lora, serif;
     font-weight: 400;
 }
 
 .lora-bold {
-    font-family: Lora;
+    font-family: Lora, serif;
     font-weight: 700;
 }
 
 .graphik-regular {
-    font-family: Graphik;
+    font-family: Graphik, sans-serif;
     font-weight: 400;
 }
 
 .graphik-bold {
-    font-family: Graphik;
+    font-family: Graphik, sans-serif;
     font-weight: 700;
 }
 
@@ -31,7 +31,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-size: 15px;
-    font-family: "Graphik";
+    font-family: "Graphik", sans-serif;
     font-weight: normal;
     line-height: 1.5;
     margin: 0;
@@ -60,7 +60,7 @@ h2 {
 }
 
 h2 span.type-regular {
-    font-family: 'Graphik';
+    font-family: 'Graphik', sans-serif;
     font-weight: normal;
     color: #737373;;
     font-size: 24px;
@@ -178,8 +178,8 @@ p {
     padding: 12px;
     border-top: 1px solid #e0e0e0;
     border-left: 1px solid #e0e0e0;
-    border-right: 0px;
-    border-bottom: 0px;
+    border-right: 0;
+    border-bottom: 0;
 }
 
 .c-tabs button:nth-child(2) {
@@ -200,9 +200,8 @@ p {
 
 .c-panel-typography {
     border: 0;
-    padding: 0;
     border-top: 1px solid #e0e0e0;
-    padding-top: 16px;
+    padding: 16px 0 0 0;
 }
 
 
