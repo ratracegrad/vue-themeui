@@ -26,7 +26,7 @@
 
 <script>
 export default {
-    name: "Body"
+    name: 'Body'
 };
 </script>
 

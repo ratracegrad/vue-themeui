@@ -117,7 +117,7 @@
 
 <script>
 export default {
-    name: "Lora"
+    name: 'Lora'
 };
 </script>
 

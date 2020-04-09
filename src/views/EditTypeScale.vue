@@ -256,7 +256,7 @@
 </template>
 <script>
 export default {
-    name: "EditTypeScale"
+    name: 'EditTypeScale'
 };
 </script>
 <style scoped></style>

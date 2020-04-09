@@ -112,11 +112,11 @@
 </template>
 
 <script>
-import ChorusLogo from "./ChorusLogo";
+import ChorusLogo from './ChorusLogo';
 
 // to do: abstract all of this
 export default {
-    name: "app-navigation",
+    name: 'app-navigation',
     components: {
         ChorusLogo
     },

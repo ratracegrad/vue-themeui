@@ -91,16 +91,16 @@
 </template>
 
 <script>
-import Intro from "@/components/Intro";
-import Fonts from "@/components/Fonts";
-import Categories from "@/components/Categories";
-import Typography from "@/components/Typography";
-import Sizing from "@/components/Sizing";
-import Spacing from "@/components/Spacing";
-import ContinueButton from "@/components/NextStep";
+import Intro from '@/components/Intro';
+import Fonts from '@/components/Fonts';
+import Categories from '@/components/Categories';
+import Typography from '@/components/Typography';
+import Sizing from '@/components/Sizing';
+import Spacing from '@/components/Spacing';
+import ContinueButton from '@/components/NextStep';
 
 export default {
-    name: "Menu2",
+    name: 'Menu2',
     data() {
         return {
             e1: 1

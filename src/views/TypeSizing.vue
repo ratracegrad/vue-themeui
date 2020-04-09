@@ -196,7 +196,7 @@
 
 <script>
 export default {
-    name: "TypeSizing"
+    name: 'TypeSizing'
 };
 </script>
 

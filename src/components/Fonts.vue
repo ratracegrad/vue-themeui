@@ -205,7 +205,7 @@
 
 <script>
 export default {
-    name: "Fonts"
+    name: 'Fonts'
 };
 </script>
 

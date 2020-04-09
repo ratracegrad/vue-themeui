@@ -328,7 +328,7 @@
 
 <script>
 export default {
-    name: "Sizing"
+    name: 'Sizing'
 };
 </script>
 

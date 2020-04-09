@@ -230,7 +230,7 @@
 
 <script>
 export default {
-    name: "Spacing"
+    name: 'Spacing'
 };
 </script>
 

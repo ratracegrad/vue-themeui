@@ -129,7 +129,7 @@
 
 <script>
 export default {
-    name: "Typography",
+    name: 'Typography',
     data: () => ({
         lineHeight: {
             tight: 1.1,
@@ -138,9 +138,9 @@ export default {
             body: 1.7
         },
         letterSpacing: {
-            default: "0",
-            caps: ".04em",
-            expressive: ".02em"
+            default: '0',
+            caps: '.04em',
+            expressive: '.02em'
         }
     })
 };

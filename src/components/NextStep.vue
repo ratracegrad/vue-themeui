@@ -10,7 +10,7 @@
 
 <script>
 export default {
-    name: "NextStep",
+    name: 'NextStep',
     props: {
         nextStep: {
             type: Number,

@@ -271,23 +271,23 @@
 </template>
 
 <script>
-import * as axios from "axios";
+import * as axios from 'axios';
 
 // const BASE_URL = "http://localhost:5000";
-const BASE_URL = "https://themui-backend.herokuapp.com";
+const BASE_URL = 'https://themui-backend.herokuapp.com';
 const STATUS_INITIAL = 0,
     STATUS_SAVING = 1,
     STATUS_SUCCESS = 2,
     STATUS_FAILED = 3;
 
 export default {
-    name: "Fonts",
+    name: 'Fonts',
     data: () => ({
         radioChoice: null,
         uploadedFiles: [],
         uploadError: null,
         currentStatus: null,
-        uploadFieldName: "fonts"
+        uploadFieldName: 'fonts'
     }),
     computed: {
         isInitial() {
@@ -335,7 +335,7 @@ export default {
             //   console.log(fieldName, fileList[x], fileList[x].name);
             //   formData.append(fieldName, fileList[x], fileList[x].name);
             // });
-            formData.append("file", fileList[0]);
+            formData.append('file', fileList[0]);
 
             // save it
             this.save(formData);

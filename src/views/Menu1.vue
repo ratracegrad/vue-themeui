@@ -121,10 +121,10 @@
 </template>
 
 <script>
-import ChorusLogoWhite from "../components/ChorusLogoWhite";
+import ChorusLogoWhite from '../components/ChorusLogoWhite';
 
 export default {
-    name: "Menu1",
+    name: 'Menu1',
     components: {
         ChorusLogoWhite
     },

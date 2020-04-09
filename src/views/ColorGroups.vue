@@ -26,7 +26,7 @@
 
 <script>
 export default {
-    name: "ColorGroups"
+    name: 'ColorGroups'
 };
 </script>
 

@@ -1,119 +1,119 @@
-import Vue from "vue";
-import VueRouter from "vue-router";
-import Home from "../views/Home.vue";
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
     {
-        path: "/",
-        name: "Home",
+        path: '/',
+        name: 'Home',
         component: Home,
         meta: { typography: false, tokens: false, colors: false }
     },
     {
-        path: "/fonts",
-        name: "Fonts",
+        path: '/fonts',
+        name: 'Fonts',
         meta: { typography: true, tokens: false, colors: false },
         component: () =>
-            import(/* webpackChunkName: "fonts" */ "../views/Fonts.vue")
+            import(/* webpackChunkName: "fonts" */ '../views/Fonts.vue')
     },
     {
-        path: "/typesizing",
-        name: "Type Sizing",
+        path: '/typesizing',
+        name: 'Type Sizing',
         meta: { typography: true, tokens: false, colors: false },
         component: () =>
-            import(/* webpackChunkName: "sizing" */ "../views/TypeSizing.vue")
+            import(/* webpackChunkName: "sizing" */ '../views/TypeSizing.vue')
     },
     {
-        path: "/typography",
-        name: "Typography",
+        path: '/typography',
+        name: 'Typography',
         meta: { typography: true, tokens: false, colors: false },
         component: () =>
             import(
-                /* webpackChunkName: "typography" */ "../views/Typography.vue"
+                /* webpackChunkName: "typography" */ '../views/Typography.vue'
             )
     },
 
     {
-        path: "/categories",
-        name: "Categories",
+        path: '/categories',
+        name: 'Categories',
         meta: { typography: true, tokens: true, colors: false },
         component: () =>
             import(
-                /* webpackChunkName: "categories" */ "../views/Categories.vue"
+                /* webpackChunkName: "categories" */ '../views/Categories.vue'
             )
     },
     {
-        path: "/headings",
-        name: "Headings",
+        path: '/headings',
+        name: 'Headings',
         meta: { typography: true, tokens: true, colors: false },
         component: () =>
-            import(/* webpackChunkName: "headings" */ "../views/Headings.vue")
+            import(/* webpackChunkName: "headings" */ '../views/Headings.vue')
     },
     {
-        path: "/body",
-        name: "Body",
+        path: '/body',
+        name: 'Body',
         meta: { typography: true, tokens: true, colors: false },
         component: () =>
-            import(/* webpackChunkName: "body" */ "../views/Body.vue")
+            import(/* webpackChunkName: "body" */ '../views/Body.vue')
     },
     {
-        path: "/meta",
-        name: "Meta",
+        path: '/meta',
+        name: 'Meta',
         meta: { typography: true, tokens: true, colors: false },
         component: () =>
-            import(/* webpackChunkName: "meta" */ "../views/Meta.vue")
+            import(/* webpackChunkName: "meta" */ '../views/Meta.vue')
     },
     {
-        path: "/ui",
-        name: "UI",
+        path: '/ui',
+        name: 'UI',
         meta: { typography: true, tokens: true, colors: false },
-        component: () => import(/* webpackChunkName: "ui" */ "../views/UI.vue")
+        component: () => import(/* webpackChunkName: "ui" */ '../views/UI.vue')
     },
     {
-        path: "/palette",
-        name: "Palette",
+        path: '/palette',
+        name: 'Palette',
         meta: { typography: false, tokens: false, colors: true },
         component: () =>
-            import(/* webpackChunkName: "palette" */ "../views/Palette.vue")
+            import(/* webpackChunkName: "palette" */ '../views/Palette.vue')
     },
     {
-        path: "/colorgroups",
-        name: "ColorGroups",
+        path: '/colorgroups',
+        name: 'ColorGroups',
         meta: { typography: false, tokens: false, colors: true },
         component: () =>
             import(
-                /* webpackChunkName: "colorgroups" */ "../views/ColorGroups.vue"
+                /* webpackChunkName: "colorgroups" */ '../views/ColorGroups.vue'
             )
     },
     {
-        path: "/edittypescale",
-        name: "Edit Type Scale",
+        path: '/edittypescale',
+        name: 'Edit Type Scale',
         meta: { typography: true, tokens: false, colors: false },
         component: () =>
             import(
-                /* webpackChunkName: "sizing" */ "../views/EditTypeScale.vue"
+                /* webpackChunkName: "sizing" */ '../views/EditTypeScale.vue'
             )
     },
     {
-        path: "/spacing",
-        name: "Spacing",
+        path: '/spacing',
+        name: 'Spacing',
         meta: { typography: false, tokens: false, colors: false },
         component: () =>
-            import(/* webpackChunkName: "spacing" */ "../views/Spacing.vue")
+            import(/* webpackChunkName: "spacing" */ '../views/Spacing.vue')
     },
     {
-        path: "/lora",
-        name: "Lora",
+        path: '/lora',
+        name: 'Lora',
         meta: { typography: true, tokens: false, colors: false },
         component: () =>
-            import(/* webpackChunkName: "lora" */ "../views/Lora.vue")
+            import(/* webpackChunkName: "lora" */ '../views/Lora.vue')
     }
 ];
 
 const router = new VueRouter({
-    mode: "history",
+    mode: 'history',
     base: process.env.BASE_URL,
     routes
 });

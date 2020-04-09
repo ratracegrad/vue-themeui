@@ -20,7 +20,7 @@
 
 <script>
 export default {
-    name: "Collapse",
+    name: 'Collapse',
     data() {
         return {
             active: false
@@ -39,14 +39,14 @@ export default {
     },
     ready() {
         if (this.active) {
-            this.$emit("collapse-open", this.index);
+            this.$emit('collapse-open', this.index);
         }
     },
     methods: {
         toggle() {
             this.active = !this.active;
             if (this.active) {
-                this.$emit("collapse-open", this.index);
+                this.$emit('collapse-open', this.index);
             }
         }
     }
@@ -79,7 +79,7 @@ export default {
     -o-transition: all 0.2s;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
-    content: url("./arrow-down.svg");
+    content: url('./arrow-down.svg');
     position: absolute;
     font-size: 0.4em;
     top: calc(50% - 0.4em);

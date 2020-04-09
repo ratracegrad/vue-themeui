@@ -26,7 +26,7 @@
 
 <script>
 export default {
-    name: "UI"
+    name: 'UI'
 };
 </script>
 

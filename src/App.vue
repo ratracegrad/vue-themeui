@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import AppNavigation from "@/components/app-navigation";
+import AppNavigation from '@/components/app-navigation';
 export default {
     components: {
         AppNavigation

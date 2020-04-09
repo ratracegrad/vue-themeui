@@ -30,29 +30,29 @@
 
 <script>
 export default {
-    name: "SaveButton",
+    name: 'SaveButton',
     data: function() {
         return {
-            saveState: "READY"
+            saveState: 'READY'
         };
     },
     methods: {
         clickSave: function() {
-            this.saveState = "CONFIRM";
+            this.saveState = 'CONFIRM';
         },
         clickConfirm: function() {
-            this.saveState = "SAVED";
-            this.$emit("save");
+            this.saveState = 'SAVED';
+            this.$emit('save');
         },
         clickCancel: function() {
-            this.saveState = "READY";
+            this.saveState = 'READY';
         }
     },
-    props: ["enabled"],
+    props: ['enabled'],
     watch: {
         enabled: function(val) {
             if (val) {
-                this.saveState = "READY";
+                this.saveState = 'READY';
             }
         }
     }
