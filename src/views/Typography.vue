@@ -13,16 +13,16 @@
             </h2>
 
             <div class="flex margin-xl">
-                <div style="flex-basis: 25%;">
+                <div style="flex-basis: 20%;">
                     <h3 style="margin-top: 0; margin-bottom: 4px;">
                         Line Height
                     </h3>
                     <p>Set four contexts.</p>
                 </div>
-                <div style="flex-basis: 75%;">
+                <div style="flex-basis: 80%;">
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <span
-                            style="font-size:44px; flex-basis: 75%; margin-left: 12px; font-weight: bold;"
+                            style="font-size:44px; flex-basis: 80%; margin-left: 12px; font-weight: bold;"
                             v-bind:style="{ lineHeight: lineHeight.tight }"
                             >Tight applies to larger font sizes, like those used
                             in headlines</span
@@ -50,7 +50,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                         <span
-                            style="font-size:16px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:16px; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{ lineHeight: lineHeight.medium }"
                             >This line height applies to medium font sizes.
                             Here's some sample text for you to test this value.
@@ -81,7 +81,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -100,7 +100,7 @@
                             </div>
                         </div>
                         <span
-                            style="font-size:12px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:12px; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{ lineHeight: lineHeight.loose }"
                             >This line height applies to small font sizes.
                             Here's some sample text for you to test this value.
@@ -112,7 +112,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -131,7 +131,7 @@
                             </div>
                         </div>
                         <span
-                            style="font-size:18px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:18px; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{ lineHeight: lineHeight.body }"
                             >This line height applies to the body copy in an
                             article, which we think is a little different than
@@ -143,7 +143,7 @@
             </div>
 
             <div class="flex margin-xl">
-                <div style="flex-basis: 25%;">
+                <div style="flex-basis: 20%;">
                     <h3 style="margin-top: 0; margin-bottom: 4px;">
                         Letterspacing
                     </h3>
@@ -152,7 +152,7 @@
                 <div style="flex-basis: 75%;">
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -183,7 +183,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -212,7 +212,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -251,16 +251,16 @@
             </h2>
 
             <div class="flex margin-xl">
-                <div style="flex-basis: 25%;">
+                <div style="flex-basis: 20%;">
                     <h3 style="margin-top: 0; margin-bottom: 4px;">
                         Line Height
                     </h3>
                     <p>Set four contexts.</p>
                 </div>
-                <div style="flex-basis: 75%;">
+                <div style="flex-basis: 80%;">
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -280,7 +280,7 @@
                         </div>
                         <span
                             class="lora-bold"
-                            style="font-size:44px; flex-basis: 75%; margin-left: 12px; font-weight: bold;"
+                            style="font-size:44px; flex-basis: 80%; margin-left: 12px; font-weight: bold;"
                             v-bind:style="{ lineHeight: lineHeight.tight }"
                             >Tight applies to larger font sizes, like those used
                             in headlines</span
@@ -289,7 +289,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -309,7 +309,7 @@
                         </div>
                         <span
                             class="lora-regular"
-                            style="font-size:16px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:16px; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{ lineHeight: lineHeight.medium }"
                             >This line height applies to medium font sizes.
                             Here's some sample text for you to test this value.
@@ -321,7 +321,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -341,7 +341,7 @@
                         </div>
                         <span
                             class="lora-regular"
-                            style="font-size:12px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:12px; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{ lineHeight: lineHeight.loose }"
                             >This line height applies to small font sizes.
                             Here's some sample text for you to test this value.
@@ -353,7 +353,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -373,7 +373,7 @@
                         </div>
                         <span
                             class="lora-regular"
-                            style="font-size:18px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:18px; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{ lineHeight: lineHeight.body }"
                             >This line height applies to the body copy in an
                             article, which we think is a little different than
@@ -385,16 +385,16 @@
             </div>
 
             <div class="flex">
-                <div style="flex-basis: 25%;">
+                <div style="flex-basis: 20%;">
                     <h3 style="margin-top: 0; margin-bottom: 4px;">
                         Letterspacing
                     </h3>
                     <p>Set three contexts.</p>
                 </div>
-                <div style="flex-basis: 75%;">
+                <div style="flex-basis: 80%;">
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -414,7 +414,7 @@
                         </div>
                         <span
                             class="lora-regular"
-                            style="font-size:16px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:16px; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{
                                 letterSpacing: letterSpacing.default
                             }"
@@ -426,7 +426,7 @@
 
                     <div class="flex margin-xl">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -446,7 +446,7 @@
                         </div>
                         <span
                             class="lora-regular"
-                            style="font-size:12px; text-transform:uppercase; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:12px; text-transform:uppercase; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{ letterSpacing: letterSpacing.caps }"
                             >Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit, sed do eiusmod tempor incididunt ut labore et
@@ -456,7 +456,7 @@
 
                     <div class="flex margin-lg">
                         <div
-                            style="flex-basis: 25%; display: flex; align-items: baseline;"
+                            style="flex-basis: 20%; display: flex; align-items: baseline;"
                         >
                             <div
                                 class="flex"
@@ -476,7 +476,7 @@
                         </div>
                         <span
                             class="lora-regular"
-                            style="font-size:12px; flex-basis: 75%; margin-left: 12px;"
+                            style="font-size:12px; flex-basis: 80%; margin-left: 12px;"
                             v-bind:style="{
                                 letterSpacing: letterSpacing.expressive
                             }"
