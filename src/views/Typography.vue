@@ -1,16 +1,17 @@
 <template>
     <section class="l-content l-content-typography">
         <h1>Character Spacing</h1>
-        <p>Set the values associated with your chosen fonts.</p>
-        <div class="c-tab-nav margin-xl">
-            <p><span class="c-jump">Jump to:</span> <span class="c-jump"><a href="#graphik">Graphik</a></span> <span class="c-jump lora-regular"><a href="#lora">Lora</a></span></p>
+        <p>Set the values associated with your chosen fonts. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+        <div class="c-tab-nav margin-lg">
+            <p class="margin-reset"><span class="c-jump">Jump to:</span> <span class="c-jump"><a href="#graphik">Graphik</a></span> <span class="c-jump lora-regular"><a href="#lora">Lora</a></span></p>
         </div>
+        <hr>
         <div class="c-panel c-panel-typography" id="graphik">
-            <h2 class="margin-xl" style="margin-top: 0;">
+            <h2 class="margin-lg line-height-reset">
                 Graphik <span class="type-regular">Regular, Bold</span>
             </h2>
 
-            <div class="flex margin-xl">
+            <div class="flex margin-lg">
                 <div class="col-20">
                     <h5 style="margin-top: 0; margin-bottom: 4px;">
                         Line Height
@@ -18,7 +19,7 @@
                     <p>Set four contexts.</p>
                 </div>
                 <div class="col-80">
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -46,7 +47,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -77,7 +78,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -108,7 +109,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -140,7 +141,7 @@
                 </div>
             </div>
 
-            <div class="flex margin-xl">
+            <div class="flex margin-lg">
                 <div class="col-20">
                     <h5 style="margin-top: 0; margin-bottom: 4px;">
                         Letterspacing
@@ -148,7 +149,7 @@
                     <p>Set three contexts.</p>
                 </div>
                 <div class="col-80">
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -179,7 +180,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -208,7 +209,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -240,15 +241,15 @@
                     </div>
                 </div>
             </div>
-            <p class="c-top"><a href="#top">Return to top</a></p>
+            <p class="c-top margin-reset"><a href="#top">Return to top</a></p>
         </div>
-
+        <hr>
         <div class="c-panel c-panel-typography" id="lora">
-            <h2 class="margin-xl lora-bold" style="margin-top: 0;">
+            <h2 class="margin-lg lora-bold line-height-reset">
                 Lora <span class="type-regular">Regular, Bold</span>
             </h2>
 
-            <div class="flex margin-xl">
+            <div class="flex margin-lg">
                 <div class="col-20">
                     <h5 style="margin-top: 0; margin-bottom: 4px;">
                         Line Height
@@ -256,7 +257,7 @@
                     <p>Set four contexts.</p>
                 </div>
                 <div class="col-80">
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -285,7 +286,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -317,7 +318,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -349,7 +350,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -390,7 +391,7 @@
                     <p>Set three contexts.</p>
                 </div>
                 <div class="col-80">
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
@@ -422,7 +423,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-xl">
+                    <div class="flex margin-lg">
                         <div
                             class="flex align-base col-25"
                         >
