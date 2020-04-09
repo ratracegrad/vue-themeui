@@ -103,7 +103,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-lg">
+                    <div class="flex margin-xl">
                         <div
                             class="flex align-base col-25"
                         >
@@ -330,7 +330,7 @@
                         >
                     </div>
 
-                    <div class="flex margin-lg">
+                    <div class="flex margin-xl">
                         <div
                             class="flex align-base col-25"
                         >
@@ -465,30 +465,18 @@
 
         <hr />
 
-        <div class="flex" style="justify-content: center;">
-            <router-link
-                to="/typesizing"
-                style="text-decoration: none; margin-right: 8px"
-            >
-                <res-button design="secondary"
-                    ><button>Previous</button></res-button
-                >
-            </router-link>
-            <router-link to="/categories" style="text-decoration: none;">
-                <res-button design="secondary"
-                    ><button>Next</button></res-button
-                >
-            </router-link>
-        </div>
+        <PrevNext :prevLink="'typesizing'" :nextLink="'categories'"></PrevNext>
     </section>
 </template>
 
 <script>
 import SaveButton from '@/components/SaveButton';
+import PrevNext from '@/components/PrevNext';
 export default {
     name: 'Typography',
     components: {
-        SaveButton
+        SaveButton,
+        PrevNext
     },
     computed: {
         formUpdated: function() {
