@@ -12,9 +12,9 @@
 
             <div class="flex margin-xl">
                 <div class="col-20">
-                    <h3 style="margin-top: 0; margin-bottom: 4px;">
+                    <h5 style="margin-top: 0; margin-bottom: 4px;">
                         Line Height
-                    </h3>
+                    </h5>
                     <p>Set four contexts.</p>
                 </div>
                 <div class="col-80">
@@ -142,9 +142,9 @@
 
             <div class="flex margin-xl">
                 <div class="col-20">
-                    <h3 style="margin-top: 0; margin-bottom: 4px;">
+                    <h5 style="margin-top: 0; margin-bottom: 4px;">
                         Letterspacing
-                    </h3>
+                    </h5>
                     <p>Set three contexts.</p>
                 </div>
                 <div class="col-80">
@@ -250,9 +250,9 @@
 
             <div class="flex margin-xl">
                 <div class="col-20">
-                    <h3 style="margin-top: 0; margin-bottom: 4px;">
+                    <h5 style="margin-top: 0; margin-bottom: 4px;">
                         Line Height
-                    </h3>
+                    </h5>
                     <p>Set four contexts.</p>
                 </div>
                 <div class="col-80">
@@ -384,9 +384,9 @@
 
             <div class="flex">
                 <div class="col-20">
-                    <h3 style="margin-top: 0; margin-bottom: 4px;">
+                    <h5 style="margin-top: 0; margin-bottom: 4px;">
                         Letterspacing
-                    </h3>
+                    </h5>
                     <p>Set three contexts.</p>
                 </div>
                 <div class="col-80">
