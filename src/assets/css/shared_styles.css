@@ -240,8 +240,12 @@ p {
     font-weight: 600;
 }
 
-.c-tab-top {
+.c-top {
     text-align: right;
+}
+
+.c-jump {
+    margin-right: 1rem;
 }
 
 .c-typography-text {
@@ -307,4 +311,24 @@ p {
     display:flex;
     flex: 1 1 auto;
     max-width: 100%;
+}
+
+/*column helpers
+*/
+.col-20 {
+    flex-basis: 20% !important;
+}
+.col-80 {
+    flex-basis: 80% !important;
+}
+
+.col-25 {
+    flex-basis: 25% !important;
+}
+.col-75 {
+    flex-basis: 75% !important;
+}
+
+.align-base {
+    align-items: baseline;
 }
