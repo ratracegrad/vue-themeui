@@ -114,6 +114,7 @@ p {
     border-right: 1px solid #e0e0e0;
     overflow-y: auto;
     height: 100vh;
+    position: fixed;
 }
 
 .c-nav {
@@ -213,11 +214,15 @@ p {
 .l-content {
     max-width: 768px;
     margin-left: 50px;
+    margin-left: 275px;
+    margin-bottom: 50px;
 }
 
 .l-content-typography {
     max-width: 1024px;
     margin-left: 50px;
+    margin-left: 275px;
+    margin-bottom: 50px;
 }
 
 .l-content-typography label {
