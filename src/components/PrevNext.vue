@@ -35,7 +35,7 @@
 
                 <router-link :to="nextLink">
                     <li class="res-pagination__next" data-direction="next">
-                        <span>next</span>
+                        <span style="margin-right: 4px;">next</span>
                         <res-icon
                             name="right"
                             size="medium"
