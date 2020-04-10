@@ -29,7 +29,7 @@
                     <h5 class="margin-xxs">
                         Line Height
                     </h5>
-                    <p>Set four contexts.</p>
+                    <p>Set four contexts</p>
                 </div>
                 <div class="col-80">
                     <div class="flex margin-lg">
@@ -131,7 +131,7 @@
                     <h5 class="margin-xxs">
                         Letterspacing
                     </h5>
-                    <p>Set three contexts.</p>
+                    <p>Set three contexts</p>
                 </div>
                 <div class="col-80">
                     <div class="flex margin-lg">
@@ -215,7 +215,7 @@
                     <h5 class="margin-xxs">
                         Line Height
                     </h5>
-                    <p>Set four contexts.</p>
+                    <p>Set four contexts</p>
                 </div>
                 <div class="col-80">
                     <div class="flex margin-lg">
@@ -317,7 +317,7 @@
                     <h5 class="margin-xxs">
                         Letterspacing
                     </h5>
-                    <p>Set three contexts.</p>
+                    <p>Set three contexts</p>
                 </div>
                 <div class="col-80">
                     <div class="flex margin-lg">
