@@ -21,7 +21,7 @@
             ><res-icon name="x"></res-icon><button>Cancel</button></res-button
         >
 
-        <res-button v-show="saveState === 'SAVED'"
+        <res-button class="button-success" v-show="saveState === 'SAVED'"
             ><res-icon name="check"></res-icon
             ><button>Success!</button></res-button
         >
@@ -58,3 +58,12 @@ export default {
     }
 };
 </script>
+
+<style>
+
+res-button.button-success button:hover {
+    cursor: auto;
+    text-decoration: none !important;
+}
+
+</style>
