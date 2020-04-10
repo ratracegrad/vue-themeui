@@ -71,6 +71,9 @@ export default {
 .res-pagination .res-pagination__pagination li {
     padding: 6px 3px !important;
 }
+.res-pagination .res-pagination__pagination li:hover {
+    background-color: #eeeeee;
+}
 .res-pagination .res-icon svg {
     margin-top: 1px;
 }
