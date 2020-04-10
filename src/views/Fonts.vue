@@ -256,7 +256,6 @@
         <hr />
 
         <PrevNext :prevLink="'index'" :nextLink="'typesizing'"></PrevNext>
-
     </section>
 </template>
 

@@ -161,7 +161,6 @@
             </div>
         </div>
         <PrevNext :prevLink="'categories'" :nextLink="'palette'"></PrevNext>
-
     </section>
 </template>
 

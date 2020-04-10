@@ -72,7 +72,6 @@
             >
         </div>
         <PrevNext :prevLink="'typography'" :nextLink="'headings'"></PrevNext>
-
     </section>
 </template>
 

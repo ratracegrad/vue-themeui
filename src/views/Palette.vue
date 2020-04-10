@@ -1,10 +1,8 @@
 <template>
     <section class="l-content">
         <h1>Palette</h1>
-        <hr>
+        <hr />
         <PrevNext :prevLink="'spacing'" :nextLink="'ColorGroups'"></PrevNext>
-
-        
     </section>
 </template>
 

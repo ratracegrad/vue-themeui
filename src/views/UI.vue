@@ -1,10 +1,8 @@
 <template>
     <section class="l-content">
         <h1>UI</h1>
-        <hr>
+        <hr />
         <PrevNext :prevLink="'meta'" :nextLink="'spacing'"></PrevNext>
-
-        
     </section>
 </template>
 

@@ -180,8 +180,6 @@
         </div>
 
         <PrevNext :prevLink="'fonts'" :nextLink="'typography'"></PrevNext>
-
-
     </section>
 </template>
 

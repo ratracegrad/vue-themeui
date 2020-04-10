@@ -1,10 +1,8 @@
 <template>
     <section class="l-content">
         <h1>Color Groups</h1>
-        <hr>
+        <hr />
         <PrevNext :prevLink="'palette'" :nextLink="'#'"></PrevNext>
-
-        
     </section>
 </template>
 

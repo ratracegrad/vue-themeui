@@ -1,11 +1,24 @@
 <template>
     <section class="l-content l-content-typography">
         <h1>Character Spacing</h1>
-        <p>Set the values associated with your chosen fonts. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+        <p>
+            Set the values associated with your chosen fonts. Lorem ipsum dolor
+            sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate.
+        </p>
         <div class="c-tab-nav margin-lg">
-            <p class="margin-reset"><span class="c-jump">Jump to:</span> <span class="c-jump"><a href="#graphik">Graphik</a></span> <span class="c-jump lora-regular"><a href="#lora">Lora</a></span></p>
+            <p class="margin-reset">
+                <span class="c-jump">Jump to:</span>
+                <span class="c-jump"><a href="#graphik">Graphik</a></span>
+                <span class="c-jump lora-regular"
+                    ><a href="#lora">Lora</a></span
+                >
+            </p>
         </div>
-        <hr>
+        <hr />
         <div class="c-panel c-panel-typography" id="graphik">
             <h2 class="margin-lg line-height-reset">
                 Graphik <span class="type-regular">Regular, Bold</span>
@@ -20,15 +33,9 @@
                 </div>
                 <div class="col-80">
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Tight</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Tight</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -37,7 +44,8 @@
                                 /></res-input>
                             </div>
                         </div>
-                        <span class="col-75"
+                        <span
+                            class="col-75"
                             style="font-size:44px; font-weight: bold;"
                             v-bind:style="{ lineHeight: lineHeight.tight }"
                             >Tight applies to larger font sizes, like those used
@@ -46,15 +54,9 @@
                     </div>
 
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Medium</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Medium</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -63,7 +65,8 @@
                                 /></res-input>
                             </div>
                         </div>
-                        <span class="col-75"
+                        <span
+                            class="col-75"
                             style="font-size:16px;"
                             v-bind:style="{ lineHeight: lineHeight.medium }"
                             >This line height applies to medium font sizes.
@@ -75,15 +78,9 @@
                     </div>
 
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Loose</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Loose</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -92,7 +89,8 @@
                                 /></res-input>
                             </div>
                         </div>
-                        <span class="col-75"
+                        <span
+                            class="col-75"
                             style="font-size:12px;"
                             v-bind:style="{ lineHeight: lineHeight.loose }"
                             >This line height applies to small font sizes.
@@ -104,15 +102,9 @@
                     </div>
 
                     <div class="flex margin-xl">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Body</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Body</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -121,7 +113,8 @@
                                 /></res-input>
                             </div>
                         </div>
-                        <span class="col-75"
+                        <span
+                            class="col-75"
                             style="font-size:18px;"
                             v-bind:style="{ lineHeight: lineHeight.body }"
                             >This line height applies to the body copy in an
@@ -142,15 +135,9 @@
                 </div>
                 <div class="col-80">
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Default</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Default</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -171,15 +158,9 @@
                     </div>
 
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Caps</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Caps</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -198,15 +179,9 @@
                     </div>
 
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Expressive</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Expressive</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -229,7 +204,7 @@
             </div>
             <p class="c-top margin-reset"><a href="#top">Return to top</a></p>
         </div>
-        <hr>
+        <hr />
         <div class="c-panel c-panel-typography" id="lora">
             <h2 class="margin-lg lora-bold line-height-reset">
                 Lora <span class="type-regular">Regular, Bold</span>
@@ -244,15 +219,9 @@
                 </div>
                 <div class="col-80">
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Tight</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Tight</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -271,15 +240,9 @@
                     </div>
 
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Medium</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Medium</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -301,15 +264,9 @@
                     </div>
 
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Loose</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Loose</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -331,15 +288,9 @@
                     </div>
 
                     <div class="flex margin-xl">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Body</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Body</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -370,15 +321,9 @@
                 </div>
                 <div class="col-80">
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Default</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Default</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -400,15 +345,9 @@
                     </div>
 
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Caps</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Caps</label>
                                 <res-input
                                     ><input
                                         type="text"
@@ -428,15 +367,9 @@
                     </div>
 
                     <div class="flex margin-lg">
-                        <div
-                            class="flex align-base col-25"
-                        >
-                            <div
-                                class="flex c-typography-form">
-                                <label
-                                    
-                                    >Expressive</label
-                                >
+                        <div class="flex align-base col-25">
+                            <div class="flex c-typography-form">
+                                <label>Expressive</label>
                                 <res-input
                                     ><input
                                         type="text"
