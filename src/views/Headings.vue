@@ -1,32 +1,21 @@
 <template>
     <section class="l-content">
-        <h2>Headings Page</h2>
-        <div class="c-buttons c-buttons-save">
-            <res-button design="primary" style="margin-right: 8px"
-                ><button>Save</button></res-button
-            >
-            <div>
-                <router-link
-                    to="/categories"
-                    style="text-decoration: none; margin-right: 8px"
-                >
-                    <res-button design="secondary"
-                        ><button>Back</button></res-button
-                    >
-                </router-link>
-                <router-link to="/body" style="text-decoration: none;">
-                    <res-button design="secondary"
-                        ><button>Next</button></res-button
-                    >
-                </router-link>
-            </div>
-        </div>
+        <h1>Headings</h1>
+        <hr>
+        <PrevNext :prevLink="'categories'" :nextLink="'body'"></PrevNext>
+
+        
     </section>
 </template>
 
 <script>
+import PrevNext from '@/components/PrevNext';
+
 export default {
-    name: 'Headings'
+    name: 'Headings',
+    components: {
+        PrevNext
+    }
 };
 </script>
 

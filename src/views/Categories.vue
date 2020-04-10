@@ -70,28 +70,19 @@
             <res-button design="primary" style="margin-right: 8px"
                 ><button>Save</button></res-button
             >
-            <div>
-                <router-link
-                    to="/typography"
-                    style="text-decoration: none; margin-right: 8px"
-                >
-                    <res-button design="secondary"
-                        ><button>Back</button></res-button
-                    >
-                </router-link>
-                <router-link to="/headings" style="text-decoration: none;">
-                    <res-button design="secondary"
-                        ><button>Next</button></res-button
-                    >
-                </router-link>
-            </div>
         </div>
+        <PrevNext :prevLink="'typography'" :nextLink="'headings'"></PrevNext>
+
     </section>
 </template>
 
 <script>
+import PrevNext from '@/components/PrevNext';
 export default {
-    name: 'Categories'
+    name: 'Categories',
+    components: {
+        PrevNext
+    }
 };
 </script>
 

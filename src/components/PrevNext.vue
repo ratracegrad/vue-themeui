@@ -7,7 +7,7 @@
 
 				<router-link :to="prevLink">
 					<li class="res-pagination__prev" data-direction="prev" style="border-right: 0;"><res-icon name="left" size="medium" class="res-style-reset-inner res-style-reset-outer res-icon defined"><svg viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path d="M10.5 6.5l-3 3 3 3" stroke="#000" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg></res-icon> 
-						<span style="margin-left: 3px;">prev</span>
+						<span style="margin-left: 4px;">prev</span>
 					</li>
 				</router-link>
 
@@ -35,12 +35,10 @@ export default {
 
 <style>
 .res-pagination .res-pagination__pagination li {
-    padding: 6px 3px;
+    padding: 6px 3px !important;
 }
-.res-pagination .res-pagination__prev .res-icon {
-	vertical-align: top;
-	top: -1;
+.res-pagination .res-icon svg {
+	margin-top: 1px;
 }
-
 
 </style>

@@ -255,23 +255,14 @@
 
         <hr />
 
-        <div class="c-buttons">
-            <router-link to="/" style="text-decoration: none;"
-                ><res-button style="margin-right: 8px;" design="secondary"
-                    ><button>Back</button></res-button
-                ></router-link
-            >
-            <router-link to="/typesizing" style="text-decoration: none;"
-                ><res-button design="secondary"
-                    ><button>Next</button></res-button
-                ></router-link
-            >
-        </div>
+        <PrevNext :prevLink="'index'" :nextLink="'typesizing'"></PrevNext>
+
     </section>
 </template>
 
 <script>
 import * as axios from 'axios';
+import PrevNext from '@/components/PrevNext';
 
 // const BASE_URL = "http://localhost:5000";
 const BASE_URL = 'https://themui-backend.herokuapp.com';
@@ -282,6 +273,9 @@ const STATUS_INITIAL = 0,
 
 export default {
     name: 'Fonts',
+    components: {
+        PrevNext
+    },
     data: () => ({
         radioChoice: null,
         uploadedFiles: [],

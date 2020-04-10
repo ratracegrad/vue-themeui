@@ -160,24 +160,19 @@
                 </p>
             </div>
         </div>
-        <div class="c-buttons">
-            <router-link to="ui" style="text-decoration: none;"
-                ><res-button style="margin-right: 8px;" design="secondary"
-                    ><button>Back</button></res-button
-                ></router-link
-            >
-            <router-link to="/palette" style="text-decoration: none;"
-                ><res-button design="secondary"
-                    ><button>Next</button></res-button
-                ></router-link
-            >
-        </div>
+        <PrevNext :prevLink="'categories'" :nextLink="'palette'"></PrevNext>
+
     </section>
 </template>
 
 <script>
+import PrevNext from '@/components/PrevNext';
+
 export default {
-    name: 'Spacing'
+    name: 'Spacing',
+    components: {
+        PrevNext
+    }
 };
 </script>
 
