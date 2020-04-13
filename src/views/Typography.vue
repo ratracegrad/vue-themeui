@@ -202,7 +202,7 @@
                     </div>
                 </div>
             </div>
-            <p class="c-top margin-reset"><a href="#top">Return to top</a></p>
+            <p class="c-top margin-reset"><a href="#top">Top</a></p>
         </div>
         <hr />
         <div class="c-panel c-panel-typography" id="lora">
@@ -391,7 +391,7 @@
                     </div>
                 </div>
             </div>
-            <p class="c-top"><a href="#top">Return to top</a></p>
+            <p class="c-top"><a href="#top">Top</a></p>
         </div>
 
         <SaveButton :enabled="formUpdated" v-on:save="handleSave"></SaveButton>
