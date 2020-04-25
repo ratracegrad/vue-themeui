@@ -61,39 +61,57 @@
                 </form>
             </div>
 
-            <!--            <div v-show="radioChoice === 'URL'">-->
-            <!--                <res-input>-->
-            <!--                    <label-->
-            <!--                        >Include from URL (url from Google, Hoefler, Typekit,-->
-            <!--                        etc)</label-->
-            <!--                    >-->
-            <!--                    <input type="file" />-->
-            <!--                    <res-button slot="outer-right" design="primary"-->
-            <!--                        ><button>Submit</button></res-button-->
-            <!--                    >-->
-            <!--                </res-input>-->
-            <!--            </div>-->
+            <div v-show="radioChoice === 'URL'">
+                <res-input>
+                    <label
+                        >Include from URL (url from Google, Hoefler, Typekit,
+                        etc)</label
+                    >
+                    <input type="text" />
+                    <res-button slot="outer-right" design="primary"
+                        ><button>Submit</button></res-button
+                    >
+                </res-input>
+            </div>
+        </div>
+
+        <div v-if="waitingFonts.length">
+            <hr />
+            <p style="font-size: 12px;">
+                <i>Fonts below illustrated uploaded fonts, not defaults</i>
+            </p>
+
+            <p v-for="(file, fileIdx) in waitingFonts" :key="fileIdx">
+                {{ file.fontName }} - ({{ file.fileSize | kb }})
+                <res-icon
+                    name="x-circle"
+                    size="small"
+                    style="vertical-align: middle;"
+                    @click="removeFile(file)"
+                ></res-icon>
+            </p>
+            <p style="margin-top: 16px;">
+                <res-button design="secondary">
+                    <res-icon name="upload"></res-icon
+                    ><button @click="uploadFonts">
+                        Upload Fonts
+                    </button></res-button
+                >
+            </p>
         </div>
 
         <div v-if="totalSize > 0">
             <hr />
-            <div style="font-size: 24px;">
-                <p style="font-size: 12px;">
-                    <i>Fonts below illustrated uploaded fonts, not defaults</i>
-                </p>
-
-                <div>
-                    <p v-for="(file, fileIdx) in files" :key="fileIdx">
-                        {{ file.fontName }} - ({{ file.fileSize | kb }})
-                        <res-icon
-                            name="x-circle"
-                            size="small"
-                            style="vertical-align: middle;"
-                            @click="removeFile(file)"
-                        ></res-icon>
-                    </p>
-                </div>
-            </div>
+            <h3>Uploaded Fonts</h3>
+            <p v-for="(file, fileIdx) in uploadedFonts" :key="fileIdx">
+                {{ file.fontName }} - ({{ file.fileSize | kb }})
+                <res-icon
+                    name="x-circle"
+                    size="small"
+                    style="vertical-align: middle;"
+                    @click="removeFile(file)"
+                ></res-icon>
+            </p>
             <div class="totals">
                 <strong>Total File Size: {{ totalSize | kb }} </strong>
                 <span>&nbsp;</span>
@@ -111,10 +129,6 @@
             <res-dropdown for="medium-font-load-tooltip"
                 >file size range for "medium" is tktk</res-dropdown
             >
-            <div>
-                <res-button design="secondary">
-                    <res-icon name="upload"></res-icon><button>Upload Fonts</button></res-button>
-            </div>
         </div>
 
         <hr />
@@ -151,7 +165,10 @@ export default {
             return this.currentStatus === STATUS_SAVING;
         },
         totalSize() {
-            return this.files.reduce((accum, item) => accum + item.fileSize, 0);
+            return this.uploadedFonts.reduce(
+                (accum, item) => accum + item.fileSize,
+                0
+            );
         },
         loadTime() {
             return this.totalSize <= 200000
@@ -166,6 +183,14 @@ export default {
                 : this.totalSize <= 400000
                 ? 'gold'
                 : 'apple';
+        },
+        waitingFonts() {
+            return this.files.length > 0
+                ? this.files.filter(font => font.uploaded === false)
+                : [];
+        },
+        uploadedFonts() {
+            return this.files.filter(font => font.uploaded === true);
         }
     },
     methods: {
@@ -173,7 +198,6 @@ export default {
             this.currentStatus = STATUS_INITIAL;
             this.uploadError = null;
             this.files = [];
-            this.totalSize = 0;
         },
         getFiles(e) {
             const fonts = e.target.files;
@@ -204,7 +228,14 @@ export default {
         },
         removeFile(file) {
             this.files = this.files.filter(f => {
-                return f != file;
+                return f !== file;
+            });
+        },
+        uploadFonts() {
+            this.files = this.files.map(font => {
+                let temp = Object.assign({}, font);
+                temp.uploaded = true;
+                return temp;
             });
         }
     },
@@ -244,7 +275,6 @@ export default {
     cursor: pointer;
 }
 .uploadWrapper {
-    margin: 25px 0;
     min-height: 25px;
 }
 .totals {
