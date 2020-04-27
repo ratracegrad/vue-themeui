@@ -221,8 +221,8 @@ export default {
                     });
                 }
             };
-            reader.onerror = function() {
-                console.log('error', e);
+            reader.onerror = function(e) {
+                alert('Error: ' + e);
             };
             reader.readAsArrayBuffer(f);
         },
