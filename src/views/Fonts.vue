@@ -221,7 +221,7 @@ export default {
                     });
                 }
             };
-            reader.onerror = function(e) {
+            reader.onerror = function() {
                 console.log('error', e);
             };
             reader.readAsArrayBuffer(f);
