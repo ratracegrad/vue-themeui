@@ -60,10 +60,8 @@ export default {
 </script>
 
 <style>
-
 res-button.button-success button:hover {
     cursor: auto;
     text-decoration: none !important;
 }
-
 </style>
