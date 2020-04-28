@@ -106,10 +106,11 @@
             <p v-for="(file, fileIdx) in uploadedFonts" :key="fileIdx">
                 {{ file.fontName }} - ({{ file.fileSize | kb }})
                 <res-icon
-                    name="x-circle"
+                    res-modal-open="deleteFont"
+                    name="trash"
                     size="small"
                     style="vertical-align: middle;"
-                    @click="removeFile(file)"
+                    @click="setDeleteFontName(file.fontName)"
                 ></res-icon>
             </p>
             <div class="totals">
@@ -130,6 +131,28 @@
                 >file size range for "medium" is tktk</res-dropdown
             >
         </div>
+
+        <res-modal id="deleteFont" close-on-bg-click="">
+            <div>
+                <p style="margin-bottom: 1rem;">Delete {{ deleteFont }}?</p>
+                <res-button
+                    @click="removeFont"
+                    id="modal-close"
+                    design="secondary"
+                    res-modal-close="deleteFont"
+                    ><button>Delete font</button></res-button
+                >
+                <res-button
+                    @click="deleteFont = ''"
+                    id="modal-close"
+                    res-modal-close="deleteFont"
+                    style="margin-left: 1rem;"
+                >
+                    <res-icon name="x"></res-icon
+                    ><button>Cancel</button></res-button
+                >
+            </div>
+        </res-modal>
 
         <hr />
         <PrevNext :prevLink="'index'" :nextLink="'typesizing'"></PrevNext>
@@ -155,7 +178,8 @@ export default {
         currentStatus: null,
         uploadFieldName: 'fonts',
         files: [],
-        fileTypes: ['otf', 'ttf', 'woff']
+        fileTypes: ['otf', 'ttf', 'woff'],
+        deleteFont: ''
     }),
     computed: {
         isInitial() {
@@ -219,6 +243,7 @@ export default {
                         file: f,
                         uploaded: false
                     });
+                    // this.uploadFont(f);
                 }
             };
             reader.onerror = function(e) {
@@ -226,10 +251,11 @@ export default {
             };
             reader.readAsArrayBuffer(f);
         },
-        removeFile(file) {
+        removeFont() {
             this.files = this.files.filter(f => {
-                return f !== file;
+                return f.fontName !== this.deleteFont;
             });
+            this.deleteFont = '';
         },
         uploadFonts() {
             this.files = this.files.map(font => {
@@ -237,6 +263,9 @@ export default {
                 temp.uploaded = true;
                 return temp;
             });
+        },
+        setDeleteFontName(name) {
+            this.deleteFont = name;
         }
     },
     mounted() {
