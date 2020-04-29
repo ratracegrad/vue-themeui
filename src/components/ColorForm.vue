@@ -1,4 +1,5 @@
 <template>
+
     <div class="c-add-color-form">
         <div class="margin-med">
             <res-input
@@ -11,7 +12,7 @@
             >
         </div>
 
-        <div class="flex align-center margin-sm col-50">
+        <div class="flex align-center col-50" style="margin-bottom: 12px;">
             <res-input
                 ><label>Main</label> <input type="text" placeholder="main" />
             </res-input>
@@ -19,7 +20,7 @@
         </div>
 
         <div class="c-colors-form flex">
-            <div class="flex align-center margin-sm col-50">
+            <div class="flex align-center col-50" style="margin-bottom: 12px;">
                 <res-input
                     ><label>Faded</label>
                     <input type="text" placeholder="Faded" />
@@ -27,7 +28,7 @@
                 <div class="c-color-picker faded"></div>
             </div>
 
-            <div class="flex align-center margin-sm col-50">
+            <div class="flex align-center col-50" style="margin-bottom: 12px;">
                 <res-input
                     ><label>Light</label>
                     <input type="text" placeholder="Light" />
@@ -37,7 +38,7 @@
         </div>
 
         <div class="c-colors-form flex margin-med">
-            <div class="flex align-center margin-sm col-50">
+            <div class="flex align-center col-50" style="margin-bottom: 12px;">
                 <res-input
                     ><label>Bright</label>
                     <input type="text" placeholder="Bright" />
@@ -45,7 +46,7 @@
                 <div class="c-color-picker bright"></div>
             </div>
 
-            <div class="flex align-center margin-sm col-50">
+            <div class="flex align-center col-50" style="margin-bottom: 12px;">
                 <res-input
                     ><label>Dark</label>
                     <input type="text" placeholder="Dark" />
@@ -67,3 +68,54 @@ export default {
     name: 'ColorForm'
 };
 </script>
+
+<style>
+
+:root {
+  --color1-main: #FC6340;
+  --color1-faded: #F7F3EF;
+  --color1-light: #FFDBC2;
+  --color1-bright: #FF7E61;
+  --color1-dark: #E74F2D;
+}
+
+.c-add-color-form {
+    max-width: 500px;
+    padding: 16px;
+    border: 1px solid #e0e0e0;
+}
+
+.c-color-picker {
+    border: 1px solid #e0e0e0;
+    height: 25px;
+    width: 25px;
+    background: #000;
+    border-radius: 100%;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.faded {
+    background: var(--color1-faded);
+
+}
+
+.light {
+    background: var(--color1-light);
+}
+
+.main {
+    background: var(--color1-main);
+}
+
+.bright {
+    background: var(--color1-bright);
+}
+
+.dark {
+    background: var(--color1-dark);
+}
+
+
+</style>

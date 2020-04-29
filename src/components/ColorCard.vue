@@ -30,6 +30,7 @@
         </div>
 
         <p style="text-align: right; margin-top: 8px;">
+
             <res-icon
                 res-modal-open="edit"
                 name="edit"
@@ -48,12 +49,12 @@
 
         <res-modal id="delete" close-on-bg-click="">
             <div>
-                <p style="margin-bottom: 1rem;">Delete color?</p>
+                <p style="margin-bottom: 1rem;">Delete Orange?</p>
                 <res-button
                     id="modal-close"
                     design="secondary"
                     res-modal-close="delete"
-                    ><button>Delete color</button></res-button
+                    ><button>Delete Orange</button></res-button
                 >
                 <res-button
                     id="modal-close"
@@ -68,16 +69,16 @@
 
         <res-modal id="edit" close-on-bg-click="">
             <div>
+                <h2 style="font-size: 30px;margin-bottom: 12px;line-height: 1.2;">Edit {name of color}</h2>
                 <ColorForm></ColorForm>
 
-                <res-button
+                <div class="flex align-right"><res-button
                     id="modal-close"
                     res-modal-close="edit"
-                    style="margin-left: 1rem;"
                 >
                     <res-icon name="x"></res-icon
                     ><button>Cancel</button></res-button
-                >
+                ></div>
             </div>
         </res-modal>
     </div>

@@ -267,49 +267,6 @@ p {
     margin-right: 12px;
 }
 
-.c-add-color-form {
-    max-width: 500px;
-    margin-top: 32px;
-    padding: 16px;
-    border: 1px solid #e0e0e0;
-}
-
-.c-color-picker {
-    border: 1px solid #e0e0e0;
-    height: 25px;
-    width: 25px;
-    background: #000;
-    border-radius: 100%;
-    margin-top: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-.faded {
-    background: rgb(155,136,168);
-    background: linear-gradient(90deg, rgba(155,136,168,1) 0%, rgba(184,139,139,1) 50%, rgba(179,159,132,1) 100%);
-
-}
-
-.light {
-    background: linear-gradient(90deg, rgba(236,208,255,1) 0%, rgba(255,193,193,1) 50%, rgba(255,228,189,1) 100%);
-}
-
-.main {
-    background: rgb(152,0,255);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
-
-}
-
-.bright {
-    background: rgb(209,0,255);
-    background: linear-gradient(90deg, rgba(209,0,255,1) 0%, rgba(255,64,0,1) 50%, rgba(255,226,0,1) 100%);
-}
-
-.dark {
-    background: rgb(63,0,106);
-    background: linear-gradient(90deg, rgba(63,0,106,1) 0%, rgba(163,0,0,1) 50%, rgba(164,94,0,1) 100%);
-}
 
 .c-tab {
     color: #737373;

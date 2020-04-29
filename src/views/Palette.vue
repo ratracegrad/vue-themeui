@@ -7,27 +7,27 @@
             these colors together into modes.
         </p>
 
-        <res-button design="primary" v-on:click="showForm = !showForm"
+        <div class="margin-lg"><res-button design="primary" v-on:click="showForm = !showForm"
             ><res-icon name="add"></res-icon
             ><button>Add a color</button></res-button
-        >
+        ></div>
 
         <ColorForm v-if="showForm"></ColorForm>
 
-        <hr />
+<hr>
 
         <h2>Colors</h2>
 
         <!--         Should render a color card for each color added, and pass color data to that card
  -->
-        <div class="flex">
+        <div class="flex margin-lg">
             <ColorCard></ColorCard>
             <ColorCard></ColorCard>
         </div>
-
-        <hr />
+<hr />
 
         <h2>Neutrals</h2>
+        <NeutralsCard></NeutralsCard>
 
         <hr />
 
@@ -39,6 +39,7 @@
 import PrevNext from '@/components/PrevNext';
 import ColorForm from '@/components/ColorForm';
 import ColorCard from '@/components/ColorCard';
+import NeutralsCard from '@/components/NeutralsCard';
 
 export default {
     name: 'palette',
@@ -50,9 +51,14 @@ export default {
     components: {
         PrevNext,
         ColorForm,
-        ColorCard
+        ColorCard,
+        NeutralsCard
     }
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+
+
+
+</style>
