@@ -38,18 +38,13 @@
             </div>
 
             <div v-show="radioChoice === 'FontFile'">
-                <form
-                    enctype="multipart/form-data"
-                    novalidate
-                    v-if="isInitial || isSaving"
-                >
+                <form enctype="multipart/form-data" novalidate>
                     <div class="uploadWrapper">
                         <label class="fileContainer">
                             Select Fonts
                             <input
                                 type="file"
                                 :name="uploadFieldName"
-                                :disabled="isSaving"
                                 id="fontFile"
                                 ref="file"
                                 multiple
@@ -62,55 +57,47 @@
             </div>
 
             <div v-show="radioChoice === 'URL'">
-                <res-input>
-                    <label
-                        >Include from URL (url from Google, Hoefler, Typekit,
-                        etc)</label
-                    >
-                    <input type="text" />
-                    <res-button slot="outer-right" design="primary"
-                        ><button>Submit</button></res-button
-                    >
-                </res-input>
+                <form @submit.prevent="saveWebFont">
+                    <div>
+                        <res-input required :error="webfont.urlError">
+                            <label for="webfontUrl">URL</label>
+                            <input
+                                type="text"
+                                id="webfontUrl"
+                                v-model="webfont.url"
+                            />
+                        </res-input>
+                    </div>
+                    <div>
+                        <res-input required :error="webfont.nameError">
+                            <label for="webfontName">Font Name:</label>
+                            <input
+                                type="text"
+                                id="webfontName"
+                                v-model="webfont.name"
+                            />
+                        </res-input>
+                    </div>
+                    <div class="spaceAbove">
+                        <res-button design="primary"
+                            ><button type="submit">Submit</button></res-button
+                        >
+                    </div>
+                </form>
             </div>
-        </div>
-
-        <div v-if="waitingFonts.length">
-            <hr />
-            <p style="font-size: 12px;">
-                <i>Fonts below illustrated uploaded fonts, not defaults</i>
-            </p>
-
-            <p v-for="(file, fileIdx) in waitingFonts" :key="fileIdx">
-                {{ file.fontName }} - ({{ file.fileSize | kb }})
-                <res-icon
-                    name="x-circle"
-                    size="small"
-                    style="vertical-align: middle;"
-                    @click="removeFile(file)"
-                ></res-icon>
-            </p>
-            <p style="margin-top: 16px;">
-                <res-button design="secondary">
-                    <res-icon name="upload"></res-icon
-                    ><button @click="uploadFonts">
-                        Upload Fonts
-                    </button></res-button
-                >
-            </p>
         </div>
 
         <div v-if="totalSize > 0">
             <hr />
             <h3>Uploaded Fonts</h3>
-            <p v-for="(file, fileIdx) in uploadedFonts" :key="fileIdx">
+            <p v-for="(file, fileIdx) in files" :key="fileIdx">
                 {{ file.fontName }} - ({{ file.fileSize | kb }})
                 <res-icon
                     res-modal-open="deleteFont"
                     name="trash"
                     size="small"
                     style="vertical-align: middle;"
-                    @click="setDeleteFontName(file.fontName)"
+                    @click="deleteFont = file.fontName"
                 ></res-icon>
             </p>
             <div class="totals">
@@ -160,12 +147,9 @@
 </template>
 
 <script>
+import * as axios from 'axios';
 import PrevNext from '@/components/PrevNext';
-// const BASE_URL = 'https://themui-backend.herokuapp.com';
-const STATUS_INITIAL = 0,
-    STATUS_SAVING = 1;
-// STATUS_SUCCESS = 2,
-// STATUS_FAILED = 3;
+const BASE_URL = 'https://themui-backend.herokuapp.com';
 import openType from 'opentype.js';
 export default {
     name: 'Fonts',
@@ -179,71 +163,64 @@ export default {
         uploadFieldName: 'fonts',
         files: [],
         fileTypes: ['otf', 'ttf', 'woff'],
-        deleteFont: ''
+        deleteFont: '',
+        webfont: {
+            url: '',
+            name: '',
+            urlError: null,
+            nameError: null
+        },
+        urlError: ''
     }),
     computed: {
-        isInitial() {
-            return this.currentStatus === STATUS_INITIAL;
-        },
-        isSaving() {
-            return this.currentStatus === STATUS_SAVING;
-        },
         totalSize() {
-            return this.uploadedFonts.reduce(
-                (accum, item) => accum + item.fileSize,
-                0
-            );
+            return this.files.reduce((accum, item) => accum + item.fileSize, 0);
         },
         loadTime() {
-            return this.totalSize <= 200000
+            return this.totalSize <= 400000
                 ? 'fast'
-                : this.totalSize <= 400000
+                : this.totalSize <= 1000000
                 ? 'moderate'
                 : 'slow';
         },
         loadDesign() {
-            return this.totalSize <= 200000
+            return this.totalSize <= 400000
                 ? 'grass'
-                : this.totalSize <= 400000
+                : this.totalSize <= 1000000
                 ? 'gold'
                 : 'apple';
         },
-        waitingFonts() {
-            return this.files.length > 0
-                ? this.files.filter(font => font.uploaded === false)
-                : [];
-        },
-        uploadedFonts() {
-            return this.files.filter(font => font.uploaded === true);
+        formInvalid() {
+            return this.webfont.url === '' || this.webfont.name === '';
         }
     },
     methods: {
         reset() {
-            this.currentStatus = STATUS_INITIAL;
             this.uploadError = null;
             this.files = [];
+            this.deleteFont = '';
+            this.webfont.url = '';
+            this.webfont.name = '';
         },
         getFiles(e) {
             const fonts = e.target.files;
             if (!fonts) return;
             [...fonts].forEach(f => {
-                this.processFile(f);
+                this.getFontName(f);
             });
         },
-        processFile(f) {
+        getFontName(f) {
             let reader = new FileReader();
-            let n = this;
+            let t = this;
             reader.onload = function(e) {
                 let font = openType.parse(e.target.result);
                 if (font.supported) {
-                    n.files.push({
+                    t.upload({
                         fontName: font.names.fullName.en,
                         fileSize: f.size,
                         fileName: f.name,
-                        file: f,
-                        uploaded: false
+                        file: f
                     });
-                    // this.uploadFont(f);
                 }
             };
             reader.onerror = function(e) {
@@ -251,21 +228,57 @@ export default {
             };
             reader.readAsArrayBuffer(f);
         },
+        upload(file) {
+            const url = `${BASE_URL}/upload`;
+            const formData = new FormData();
+            formData.append('file', file.f);
+            let t = this;
+            axios
+                .post(url, formData)
+                .then(() => {
+                    t.files.push(file);
+                })
+                .catch(() => {
+                    alert('Unable to upload font: ${file.fontName');
+                });
+        },
         removeFont() {
             this.files = this.files.filter(f => {
                 return f.fontName !== this.deleteFont;
             });
             this.deleteFont = '';
         },
-        uploadFonts() {
-            this.files = this.files.map(font => {
-                let temp = Object.assign({}, font);
-                temp.uploaded = true;
-                return temp;
-            });
+        saveWebFont() {
+            if (this.formInvalid) {
+                this.webfont.urlError = this.webfont.url
+                    ? null
+                    : 'This field is required';
+                this.webfont.nameError = this.webfont.name
+                    ? null
+                    : 'This field is required';
+            } else {
+                const url = this.webfont.url;
+                if (
+                    url.includes('googleapis.com') ||
+                    url.includes('typekit.net') ||
+                    url.includes('typography.com')
+                ) {
+                    this.files.push({
+                        fontName: this.webfont.name,
+                        fileSize: 1
+                    });
+                    this.clearWebfont();
+                } else {
+                    this.webfont.urlError =
+                        'URL must be from typekit, google or typography';
+                }
+            }
         },
-        setDeleteFontName(name) {
-            this.deleteFont = name;
+        clearWebfont() {
+            this.webfont.urlError = null;
+            this.webfont.nameError = null;
+            this.webfont.url = '';
+            this.webfont.name = '';
         }
     },
     mounted() {
@@ -315,5 +328,8 @@ export default {
 }
 .totals res-badge {
     margin-left: 10px;
+}
+form res-input {
+    margin-bottom: 20px;
 }
 </style>
