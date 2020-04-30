@@ -9,7 +9,6 @@
                 uploaded.
             </p>
         </div>
-
         <div class="margin-lg" id="submit-font-zip">
             <div class="margin-sm">
                 <header class="margin-sm"><strong>Upload as:</strong></header>
@@ -44,7 +43,6 @@
                             Select Fonts
                             <input
                                 type="file"
-                                :name="uploadFieldName"
                                 id="fontFile"
                                 ref="file"
                                 multiple
@@ -86,18 +84,17 @@
                 </form>
             </div>
         </div>
-
         <div v-if="totalSize > 0">
             <hr />
             <h3>Uploaded Fonts</h3>
-            <p v-for="(file, fileIdx) in files" :key="fileIdx">
-                {{ file.fontName }} - ({{ file.fileSize | kb }})
+            <p v-for="(font, fontIdx) in fonts" :key="fontIdx">
+                {{ font.name }} - ({{ font.size | kb }})
                 <res-icon
                     res-modal-open="deleteFont"
                     name="trash"
                     size="small"
                     style="vertical-align: middle;"
-                    @click="deleteFont = file.fontName"
+                    @click="deleteFont = font.name"
                 ></res-icon>
             </p>
             <div class="totals">
@@ -118,6 +115,8 @@
                 >file size range for "medium" is tktk</res-dropdown
             >
         </div>
+        <hr />
+        <PrevNext :prevLink="'index'" :nextLink="'typesizing'"></PrevNext>
 
         <res-modal id="deleteFont" close-on-bg-click="">
             <div>
@@ -140,17 +139,15 @@
                 >
             </div>
         </res-modal>
-
-        <hr />
-        <PrevNext :prevLink="'index'" :nextLink="'typesizing'"></PrevNext>
     </section>
 </template>
 
 <script>
 import * as axios from 'axios';
 import PrevNext from '@/components/PrevNext';
-const BASE_URL = 'https://themui-backend.herokuapp.com';
 import openType from 'opentype.js';
+import { mapState } from 'vuex';
+
 export default {
     name: 'Fonts',
     components: {
@@ -160,8 +157,6 @@ export default {
         radioChoice: null,
         uploadError: null,
         currentStatus: null,
-        uploadFieldName: 'fonts',
-        files: [],
         fileTypes: ['otf', 'ttf', 'woff'],
         deleteFont: '',
         webfont: {
@@ -174,25 +169,30 @@ export default {
     }),
     computed: {
         totalSize() {
-            return this.files.reduce((accum, item) => accum + item.fileSize, 0);
+            return this.fonts.reduce((accum, item) => accum + item.size, 0);
         },
         loadTime() {
-            return this.totalSize <= 400000
+            return this.totalSize <= this.fontSizes.fast
                 ? 'fast'
-                : this.totalSize <= 1000000
+                : this.totalSize <= this.fontSizes.moderate
                 ? 'moderate'
                 : 'slow';
         },
         loadDesign() {
-            return this.totalSize <= 400000
+            return this.totalSize <= this.fontSizes.fast
                 ? 'grass'
-                : this.totalSize <= 1000000
+                : this.totalSize <= this.fontSizes.moderate
                 ? 'gold'
                 : 'apple';
         },
         formInvalid() {
             return this.webfont.url === '' || this.webfont.name === '';
-        }
+        },
+        ...mapState({
+            fonts: state => state.fonts,
+            baseURL: state => state.baseURL,
+            fontSizes: state => state.fontSizes
+        })
     },
     mounted() {
         this.reset();
@@ -200,15 +200,14 @@ export default {
     methods: {
         reset() {
             this.uploadError = null;
-            this.files = [];
             this.deleteFont = '';
             this.webfont.url = '';
             this.webfont.name = '';
         },
         getFiles(e) {
-            const fonts = e.target.files;
-            if (!fonts) return;
-            [...fonts].forEach(f => {
+            const files = e.target.files;
+            if (!files) return;
+            [...files].forEach(f => {
                 this.getFontName(f);
             });
         },
@@ -219,9 +218,8 @@ export default {
                 let font = openType.parse(e.target.result);
                 if (font.supported) {
                     t.upload({
-                        fontName: font.names.fullName.en,
-                        fileSize: f.size,
-                        fileName: f.name,
+                        name: font.names.fullName.en,
+                        size: f.size,
                         file: f
                     });
                 }
@@ -231,23 +229,25 @@ export default {
             };
             reader.readAsArrayBuffer(f);
         },
-        upload(file) {
-            const url = `${BASE_URL}/upload`;
+        upload(font) {
+            const url = `${this.baseURL}/upload`;
             const formData = new FormData();
-            formData.append('file', file.f);
-            let t = this;
+            formData.append('file', font.f);
             axios
                 .post(url, formData)
                 .then(() => {
-                    t.files.push(file);
+                    console.log(font);
+                    delete font.file; // save just name and size
+                    console.log('after', font);
+                    this.$store.commit('addFont', font);
                 })
                 .catch(() => {
                     alert('Unable to upload font: ${file.fontName');
                 });
         },
         removeFont() {
-            this.files = this.files.filter(f => {
-                return f.fontName !== this.deleteFont;
+            this.fonts = this.fonts.filter(f => {
+                return f.name !== this.deleteFont;
             });
             this.deleteFont = '';
         },
@@ -266,9 +266,9 @@ export default {
                     url.includes('typekit.net') ||
                     url.includes('typography.com')
                 ) {
-                    this.files.push({
-                        fontName: this.webfont.name,
-                        fileSize: 1
+                    this.$store.commit('addFont', {
+                        name: this.webfont.name,
+                        size: 1
                     });
                     this.clearWebfont();
                 } else {

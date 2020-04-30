@@ -5,7 +5,12 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
-        fonts: {},
+        baseURL: 'https://themui-backend.herokuapp.com',
+        fontSizes: {
+            fast: 400000,
+            moderate: 1000000
+        },
+        fonts: [],
         sizes: {},
         characterSpacing: {},
         categories: {},
@@ -18,9 +23,6 @@ export default new Vuex.Store({
         colorGroups: {}
     },
     mutations: {
-        saveFonts(state, bundle) {
-            this.state.fonts = bundle;
-        },
         saveSizes(state, bundle) {
             this.state.sizes = bundle;
         },
@@ -50,6 +52,9 @@ export default new Vuex.Store({
         },
         saveColorGroups(state, bundle) {
             this.state.colorGroups = bundle;
+        },
+        addFont(state, font) {
+            state.fonts.push(font);
         }
     },
     actions: {},
