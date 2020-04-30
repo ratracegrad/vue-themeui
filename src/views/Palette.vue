@@ -7,14 +7,16 @@
             these colors together into modes.
         </p>
 
-        <div class="margin-lg"><res-button design="primary" v-on:click="showForm = !showForm"
-            ><res-icon name="add"></res-icon
-            ><button>Add a color</button></res-button
-        ></div>
+        <div class="margin-lg">
+            <res-button design="primary" v-on:click="showForm = !showForm"
+                ><res-icon name="add"></res-icon
+                ><button>Add a color</button></res-button
+            >
+        </div>
 
         <ColorForm v-if="showForm"></ColorForm>
 
-<hr>
+        <hr />
 
         <h2>Colors</h2>
 
@@ -24,7 +26,7 @@
             <ColorCard></ColorCard>
             <ColorCard></ColorCard>
         </div>
-<hr />
+        <hr />
 
         <h2>Neutrals</h2>
         <NeutralsCard></NeutralsCard>
@@ -57,8 +59,4 @@ export default {
 };
 </script>
 
-<style scoped>
-
-
-
-</style>
+<style scoped></style>

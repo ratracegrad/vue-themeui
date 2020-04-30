@@ -1,5 +1,4 @@
 <template>
-
     <div class="c-add-color-form">
         <div class="margin-med">
             <res-input
@@ -70,13 +69,12 @@ export default {
 </script>
 
 <style>
-
 :root {
-  --color1-main: #FC6340;
-  --color1-faded: #F7F3EF;
-  --color1-light: #FFDBC2;
-  --color1-bright: #FF7E61;
-  --color1-dark: #E74F2D;
+    --color1-main: #fc6340;
+    --color1-faded: #f7f3ef;
+    --color1-light: #ffdbc2;
+    --color1-bright: #ff7e61;
+    --color1-dark: #e74f2d;
 }
 
 .c-add-color-form {
@@ -98,7 +96,6 @@ export default {
 
 .faded {
     background: var(--color1-faded);
-
 }
 
 .light {
@@ -116,6 +113,4 @@ export default {
 .dark {
     background: var(--color1-dark);
 }
-
-
 </style>
