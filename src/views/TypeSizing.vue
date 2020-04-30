@@ -330,7 +330,7 @@
                 <v-tab-item>
                     <div class="c-panel">
                         <h3>
-                            <span>Medium ({{ largeScreenSize }})</span
+                            <span>Large ({{ largeScreenSize }})</span
                             ><res-badge
                                 v-if="currentScale === 'large'"
                                 design="gold"
