@@ -7,24 +7,23 @@
             these colors together into modes.
         </p>
 
-        <div class="margin-lg"><res-button design="primary" v-on:click="showForm = !showForm"
-            ><res-icon name="add"></res-icon
-            ><button>Add a color</button></res-button
-        ></div>
+        <hr />
 
-        <ColorForm v-if="showForm"></ColorForm>
+        <ColorCard
+            v-for="card in cards"
+            :key="card.id"
+            :colorData="card.data"
+            :colorID="card.id"
+            v-on:delete="deleteColor"
+        ></ColorCard>
 
-<hr>
-
-        <h2>Colors</h2>
-
-        <!--         Should render a color card for each color added, and pass color data to that card
- -->
-        <div class="flex margin-lg">
-            <ColorCard></ColorCard>
-            <ColorCard></ColorCard>
+        <div class="margin-lg">
+            <res-button v-on:click="addColor" design="primary"
+                ><res-icon name="add"></res-icon
+                ><button>Add a color</button></res-button
+            >
         </div>
-<hr />
+        <hr />
 
         <h2>Neutrals</h2>
         <NeutralsCard></NeutralsCard>
@@ -37,28 +36,61 @@
 
 <script>
 import PrevNext from '@/components/PrevNext';
-import ColorForm from '@/components/ColorForm';
 import ColorCard from '@/components/ColorCard';
 import NeutralsCard from '@/components/NeutralsCard';
+
+let colorCounter = 1;
 
 export default {
     name: 'palette',
     data: function() {
         return {
-            showForm: false
+            cards: [
+                {
+                    id: `color${colorCounter++}`,
+                    data: {
+                        main: '#FC6340',
+                        faded: '#F7F3EF',
+                        light: '#FF7E61',
+                        bright: '#FFDBC2',
+                        dark: '#E74F2D'
+                    }
+                }
+            ]
         };
+    },
+    methods: {
+        addColor: function() {
+            let newColor = {
+                id: `color${colorCounter++}`,
+                data: {
+                    main: '#FC6340',
+                    faded: '#F7F3EF',
+                    light: '#FF7E61',
+                    bright: '#FFDBC2',
+                    dark: '#E74F2D'
+                }
+            };
+            this.cards.push(newColor);
+        },
+        deleteColor: function(colorID) {
+            let newList = [];
+
+            for (let i = 0; i < this.cards.length; i++) {
+                if (this.cards[i].id !== colorID) {
+                    newList.push(this.cards[i]);
+                }
+            }
+
+            this.cards = newList;
+        }
     },
     components: {
         PrevNext,
-        ColorForm,
         ColorCard,
         NeutralsCard
     }
 };
 </script>
 
-<style scoped>
-
-
-
-</style>
+<style scoped></style>
