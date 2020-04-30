@@ -411,6 +411,20 @@ export default {
         SaveButton,
         PrevNext
     },
+    data: () => ({
+        lineHeight: {
+            tight: 1.1,
+            medium: 1.3,
+            loose: 1.5,
+            body: 1.7
+        },
+        letterSpacing: {
+            default: '0',
+            caps: '.04em',
+            expressive: '.02em'
+        },
+        savedModel: ''
+    }),
     computed: {
         formUpdated: function() {
             return this.serializeData() !== this.savedModel;
@@ -432,21 +446,7 @@ export default {
         updateSavedModel: function() {
             this.savedModel = this.serializeData();
         }
-    },
-    data: () => ({
-        lineHeight: {
-            tight: 1.1,
-            medium: 1.3,
-            loose: 1.5,
-            body: 1.7
-        },
-        letterSpacing: {
-            default: '0',
-            caps: '.04em',
-            expressive: '.02em'
-        },
-        savedModel: ''
-    })
+    }
 };
 </script>
 

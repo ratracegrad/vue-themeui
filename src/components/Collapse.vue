@@ -21,17 +21,17 @@
 <script>
 export default {
     name: 'Collapse',
-    data() {
-        return {
-            active: false
-        };
-    },
     props: {
         selected: {
             type: Boolean,
             required: true,
             default: false
         }
+    },
+    data() {
+        return {
+            active: false
+        };
     },
     created() {
         this._isCollapseItem = true;

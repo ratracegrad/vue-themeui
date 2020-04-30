@@ -31,10 +31,18 @@
 <script>
 export default {
     name: 'SaveButton',
+    props: ['enabled'],
     data: function() {
         return {
             saveState: 'READY'
         };
+    },
+    watch: {
+        enabled: function(val) {
+            if (val) {
+                this.saveState = 'READY';
+            }
+        }
     },
     methods: {
         clickSave: function() {
@@ -46,14 +54,6 @@ export default {
         },
         clickCancel: function() {
             this.saveState = 'READY';
-        }
-    },
-    props: ['enabled'],
-    watch: {
-        enabled: function(val) {
-            if (val) {
-                this.saveState = 'READY';
-            }
         }
     }
 };

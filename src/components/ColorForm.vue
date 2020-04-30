@@ -1,5 +1,9 @@
 <template>
+<<<<<<< HEAD
     <div class="c-add-color-form col-50">
+=======
+    <div class="c-add-color-form">
+>>>>>>> 4619e273e72b29f32b6f0dc6f2151030965364cb
         <div class="margin-med">
             <res-input
                 ><label>Name</label> <input type="text" placeholder="name" />

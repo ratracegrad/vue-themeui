@@ -7,7 +7,6 @@
                 v-bind:style="{ backgroundColor: colorData.main }"
             >
                 Main
-
                 <div>
                     <input
                         type="text"
@@ -40,6 +39,7 @@
                     >
                         Light
 
+
                         <div>
                             <input
                                 type="text"
@@ -56,6 +56,7 @@
                         v-bind:style="{ backgroundColor: colorData.bright }"
                     >
                         Bright
+
 
                         <div>
                             <input

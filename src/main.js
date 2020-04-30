@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
+import store from './store';
 import './plugins/resonance';
 import './assets/css/shared_styles.css';
 import vuetify from './plugins/vuetify';
@@ -19,6 +20,7 @@ Vue.filter('kb', val => {
 
 new Vue({
     router,
+    store,
     vuetify,
     render: h => h(App)
 }).$mount('#app');

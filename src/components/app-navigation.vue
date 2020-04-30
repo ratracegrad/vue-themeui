@@ -120,19 +120,19 @@ export default {
     components: {
         ChorusLogo
     },
-    watch: {
-        $route(route) {
-            this.expandTypography = route.meta.typography;
-            this.expandTokens = route.meta.tokens;
-            this.expandColors = route.meta.colors;
-        }
-    },
     data: function() {
         return {
             expandTypography: false,
             expandTokens: false,
             expandColors: false
         };
+    },
+    watch: {
+        $route(route) {
+            this.expandTypography = route.meta.typography;
+            this.expandTokens = route.meta.tokens;
+            this.expandColors = route.meta.colors;
+        }
     }
 };
 </script>

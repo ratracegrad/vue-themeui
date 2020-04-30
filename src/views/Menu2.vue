@@ -101,11 +101,6 @@ import ContinueButton from '@/components/NextStep';
 
 export default {
     name: 'Menu2',
-    data() {
-        return {
-            e1: 1
-        };
-    },
     components: {
         Intro,
         Fonts,
@@ -114,6 +109,11 @@ export default {
         Sizing,
         Spacing,
         ContinueButton
+    },
+    data() {
+        return {
+            e1: 1
+        };
     },
     methods: {
         setThisStep(step) {
