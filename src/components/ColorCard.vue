@@ -7,13 +7,14 @@
                 v-bind:style="{ backgroundColor: colorData.main }"
             >
                 Main
-                <div>
+                <div class="flex align-center">
                     <input
                         type="text"
                         name="main"
                         :placeholder="colorData.main"
                         v-model="colorData.main"
                     />
+                    <ColorPicker></ColorPicker>
                 </div>
             </div>
             <div class="flex">
@@ -39,7 +40,6 @@
                     >
                         Light
 
-
                         <div>
                             <input
                                 type="text"
@@ -56,7 +56,6 @@
                         v-bind:style="{ backgroundColor: colorData.bright }"
                     >
                         Bright
-
 
                         <div>
                             <input
@@ -95,8 +94,13 @@
 </template>
 
 <script>
+import ColorPicker from '@/components/ColorPicker';
+
 export default {
     name: 'ColorCard',
+    components: {
+        ColorPicker
+    },
     props: ['colorData', 'colorID'],
     methods: {
         handleDeleteClick: function() {
@@ -134,5 +138,11 @@ input {
     border-bottom: 1px solid #fff;
     width: 100px;
     font-size: 20px;
+}
+
+.main,
+.light,
+.dark {
+    color: #fff;
 }
 </style>

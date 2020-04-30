@@ -43,6 +43,11 @@ let colorCounter = 1;
 
 export default {
     name: 'palette',
+    components: {
+        PrevNext,
+        ColorCard,
+        NeutralsCard
+    },
     data: function() {
         return {
             cards: [
@@ -84,11 +89,6 @@ export default {
 
             this.cards = newList;
         }
-    },
-    components: {
-        PrevNext,
-        ColorCard,
-        NeutralsCard
     }
 };
 </script>
