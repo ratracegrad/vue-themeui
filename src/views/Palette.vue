@@ -45,16 +45,16 @@ import NeutralsCard from '@/components/NeutralsCard';
 
 export default {
     name: 'palette',
-    data: function() {
-        return {
-            showForm: false
-        };
-    },
     components: {
         PrevNext,
         ColorForm,
         ColorCard,
         NeutralsCard
+    },
+    data: function() {
+        return {
+            showForm: false
+        };
     }
 };
 </script>

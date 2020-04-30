@@ -194,6 +194,9 @@ export default {
             return this.webfont.url === '' || this.webfont.name === '';
         }
     },
+    mounted() {
+        this.reset();
+    },
     methods: {
         reset() {
             this.uploadError = null;
@@ -280,9 +283,6 @@ export default {
             this.webfont.url = '';
             this.webfont.name = '';
         }
-    },
-    mounted() {
-        this.reset();
     }
 };
 </script>
