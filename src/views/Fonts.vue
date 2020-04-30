@@ -236,9 +236,7 @@ export default {
             axios
                 .post(url, formData)
                 .then(() => {
-                    console.log(font);
                     delete font.file; // save just name and size
-                    console.log('after', font);
                     this.$store.commit('addFont', font);
                 })
                 .catch(() => {
