@@ -46,7 +46,7 @@
             </v-tab>
 
             <v-tabs-items v-model="tab">
-                <v-tab-item>
+                <v-tab-item transition="none" reverse-transition="none">
                     <div class="c-panel">
                         <h3>
                             <span>Small ({{ smallScreenSize }})</span
@@ -139,7 +139,7 @@
                         </p>
                     </div>
                 </v-tab-item>
-                <v-tab-item>
+                <v-tab-item transition="none" reverse-transition="none">
                     <div class="c-panel">
                         <h3>
                             <span>Medium ({{ mediumScreenSize }})</span
@@ -327,7 +327,7 @@
                         </p>
                     </div>
                 </v-tab-item>
-                <v-tab-item>
+                <v-tab-item transition="none" reverse-transition="none">
                     <div class="c-panel">
                         <h3>
                             <span>Large ({{ largeScreenSize }})</span
