@@ -101,7 +101,7 @@ export default new Vuex.Store({
                     'font-size-12': '136px'
                 }
             },
-            desktop: {
+            large: {
                 phone: {
                     'font-size-01': '13px',
                     'font-size-02': '14px',
@@ -146,7 +146,18 @@ export default new Vuex.Store({
                 }
             }
         },
-        sizingText: 'Almost before we knew it, we had left the ground.'
+        sizingText: 'Almost before we knew it, we had left the ground.',
+        lineHeight: {
+            tight: '1.1',
+            medium: '1.3',
+            loose: '1.5',
+            body: '1.7'
+        },
+        letterSpacing: {
+            default: '0',
+            caps: '.04em',
+            expressive: '.02em'
+        }
     },
     mutations: {
         addFont(state, font) {
@@ -154,6 +165,10 @@ export default new Vuex.Store({
         },
         saveCurrentScale(state, currentScale) {
             state.currentScale = currentScale;
+        },
+        saveCharacterSpacing(state, data) {
+            state.lineHeight = data.lineHeight;
+            state.letterSpacing = data.letterSpacing;
         }
     },
     actions: {},

@@ -394,7 +394,7 @@
             <p class="c-top"><a href="#top">Top</a></p>
         </div>
 
-        <SaveButton :enabled="formUpdated" v-on:save="handleSave"></SaveButton>
+        <SaveButton :enabled="true" v-on:save="handleSave"></SaveButton>
 
         <hr />
 
@@ -405,6 +405,8 @@
 <script>
 import SaveButton from '@/components/SaveButton';
 import PrevNext from '@/components/PrevNext';
+import { mapState } from 'vuex';
+
 export default {
     name: 'Typography',
     components: {
@@ -412,39 +414,20 @@ export default {
         PrevNext
     },
     data: () => ({
-        lineHeight: {
-            tight: 1.1,
-            medium: 1.3,
-            loose: 1.5,
-            body: 1.7
-        },
-        letterSpacing: {
-            default: '0',
-            caps: '.04em',
-            expressive: '.02em'
-        },
         savedModel: ''
     }),
     computed: {
-        formUpdated: function() {
-            return this.serializeData() !== this.savedModel;
-        }
-    },
-    created: function() {
-        this.updateSavedModel();
+        ...mapState({
+            lineHeight: state => state.lineHeight,
+            letterSpacing: state => state.letterSpacing
+        })
     },
     methods: {
-        serializeData: function() {
-            return JSON.stringify({
+        handleSave: function() {
+            this.$store.commit('saveCharacterSpacing', {
                 lineHeight: this.lineHeight,
                 letterSpacing: this.letterSpacing
             });
-        },
-        handleSave: function() {
-            this.updateSavedModel();
-        },
-        updateSavedModel: function() {
-            this.savedModel = this.serializeData();
         }
     }
 };
