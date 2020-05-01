@@ -11,17 +11,21 @@
             </p>
         </div>
 
-        <p>Currently set to: <strong>Medium</strong></p>
+        <p>
+            Currently set to: <strong>{{ currentScale }}</strong>
+        </p>
         <div class="flex-center margin-lg">
             <res-select style="margin-right: 8px;"
-                ><select name="s1" id="initial-id"
+                ><select name="s1" id="initial-id" v-model="selectedScale"
                     ><option placeholder="">Select scale</option
                     ><option value="Small">Small</option
                     ><option value="Medium">Medium</option
                     ><option value="Large">Large</option></select
                 ></res-select
             >
-            <res-button design="primary"><button>Save</button></res-button>
+            <res-button design="primary" @click="saveCurrentScale"
+                ><button>Save</button></res-button
+            >
         </div>
 
         <hr />
@@ -166,11 +170,25 @@
 
 <script>
 import PrevNext from '@/components/PrevNext';
+import { mapState } from 'vuex';
 
 export default {
     name: 'Spacing',
     components: {
         PrevNext
+    },
+    data: () => ({
+        selectedScale: ''
+    }),
+    computed: {
+        ...mapState({
+            currentScale: state => state.spacingCurrentScale
+        })
+    },
+    methods: {
+        saveCurrentScale() {
+            this.$store.commit('saveSpacingScale', this.selectedScale);
+        }
     }
 };
 </script>

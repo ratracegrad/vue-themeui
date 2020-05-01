@@ -157,18 +157,31 @@ export default new Vuex.Store({
             default: '0',
             caps: '.04em',
             expressive: '.02em'
-        }
+        },
+        categories: {
+            headings: 'Graphik-Regular',
+            body: 'Graphik-Regular',
+            meta: 'Graphik-Regular',
+            UI: 'Graphik-Regular'
+        },
+        spacingCurrentScale: 'small'
     },
     mutations: {
         addFont(state, font) {
             state.fonts.push(font);
         },
-        saveCurrentScale(state, currentScale) {
-            state.currentScale = currentScale;
+        saveCurrentScale(state, payload) {
+            state.currentScale = payload;
         },
-        saveCharacterSpacing(state, data) {
-            state.lineHeight = data.lineHeight;
-            state.letterSpacing = data.letterSpacing;
+        saveCharacterSpacing(state, payload) {
+            state.lineHeight = payload.lineHeight;
+            state.letterSpacing = payload.letterSpacing;
+        },
+        saveCategories(state, payload) {
+            state.categories = payload;
+        },
+        saveSpacingScale(state, payload) {
+            state.spacingCurrentScale = payload;
         }
     },
     actions: {},
