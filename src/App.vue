@@ -1,10 +1,12 @@
 <template>
     <span id="app">
-        <main class="l-main" v-if="!this.$route.path.includes('menu')">
-            <app-navigation></app-navigation>
-            <router-view />
-        </main>
-        <router-view v-else></router-view>
+        <v-app>
+            <main class="l-main" v-if="!this.$route.path.includes('menu')">
+                <app-navigation></app-navigation>
+                <router-view />
+            </main>
+            <router-view v-else></router-view>
+        </v-app>
     </span>
 </template>
 

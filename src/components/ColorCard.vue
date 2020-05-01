@@ -14,7 +14,18 @@
                         :placeholder="colorData.main"
                         v-model="colorData.main"
                     />
-                    <ColorPicker></ColorPicker>
+                    <div>
+                        <div>
+                            <button
+                                v-on:click="isHiddenMain = !isHiddenMain"
+                                class="c-show-picker"
+                            ></button>
+                            <v-color-picker
+                                v-model="colorData.main"
+                                v-if="!isHiddenMain"
+                            ></v-color-picker>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="flex">
@@ -25,13 +36,23 @@
                     >
                         Faded
 
-                        <div>
+                        <div class="flex align-center">
                             <input
                                 type="text"
                                 name="main"
                                 :placeholder="colorData.faded"
                                 v-model="colorData.faded"
                             />
+                            <div>
+                                <button
+                                    v-on:click="isHiddenFaded = !isHiddenFaded"
+                                    class="c-show-picker"
+                                ></button>
+                                <v-color-picker
+                                    v-model="colorData.faded"
+                                    v-if="!isHiddenFaded"
+                                ></v-color-picker>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -40,13 +61,23 @@
                     >
                         Light
 
-                        <div>
+                        <div class="flex align-center">
                             <input
                                 type="text"
                                 name="light"
                                 :placeholder="colorData.light"
                                 v-model="colorData.light"
                             />
+                            <div>
+                                <button
+                                    v-on:click="isHiddenLight = !isHiddenLight"
+                                    class="c-show-picker"
+                                ></button>
+                                <v-color-picker
+                                    v-model="colorData.light"
+                                    v-if="!isHiddenLight"
+                                ></v-color-picker>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -57,13 +88,25 @@
                     >
                         Bright
 
-                        <div>
+                        <div class="flex align-center">
                             <input
                                 type="text"
                                 name="main"
                                 :placeholder="colorData.bright"
                                 v-model="colorData.bright"
                             />
+                            <div>
+                                <button
+                                    v-on:click="
+                                        isHiddenBright = !isHiddenBright
+                                    "
+                                    class="c-show-picker"
+                                ></button>
+                                <v-color-picker
+                                    v-model="colorData.bright"
+                                    v-if="!isHiddenBright"
+                                ></v-color-picker>
+                            </div>
                         </div>
                     </div>
                     <div
@@ -72,13 +115,23 @@
                     >
                         Dark
 
-                        <div>
+                        <div class="flex align-center">
                             <input
                                 type="text"
                                 name="dark"
                                 :placeholder="colorData.dark"
                                 v-model="colorData.dark"
                             />
+                            <div>
+                                <button
+                                    v-on:click="isHiddenDark = !isHiddenDark"
+                                    class="c-show-picker"
+                                ></button>
+                                <v-color-picker
+                                    v-model="colorData.dark"
+                                    v-if="!isHiddenDark"
+                                ></v-color-picker>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,14 +147,18 @@
 </template>
 
 <script>
-import ColorPicker from '@/components/ColorPicker';
-
 export default {
     name: 'ColorCard',
-    components: {
-        ColorPicker
+    props: ['colorData'],
+    data() {
+        return {
+            isHiddenMain: true,
+            isHiddenFaded: true,
+            isHiddenLight: true,
+            isHiddenBright: true,
+            isHiddenDark: true
+        };
     },
-    props: ['colorData', 'colorID'],
     methods: {
         handleDeleteClick: function() {
             this.$emit('delete', this.colorID);
@@ -144,5 +201,26 @@ input {
 .light,
 .dark {
     color: #fff;
+}
+
+.faded .c-show-picker,
+.bright .c-show-picker {
+    border: 1px solid #4b4b4b;
+}
+.faded input,
+.bright input {
+    border-bottom: 1px solid #4b4b4b;
+}
+
+.v-color-picker {
+    position: absolute;
+    z-index: 10;
+}
+.c-show-picker {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+    border: 1px solid #fff;
+    border-radius: 20%;
 }
 </style>

@@ -5,7 +5,14 @@
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/495601/Graphik-Medium.ttf')  format('truetype');
 }
 
+.v-application {
+    font-family: unset !important;
+    line-height: unset !important;
+}
 
+.v-application ul, .v-application ol {
+    padding-left: 0 !important;
+}
 
 .lora-regular {
     font-family: Lora, serif;
