@@ -149,7 +149,7 @@
 <script>
 export default {
     name: 'ColorCard',
-    props: ['colorData'],
+    props: ['colorData', 'colorID'],
     data() {
         return {
             isHiddenMain: true,
