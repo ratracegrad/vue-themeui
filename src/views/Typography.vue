@@ -423,7 +423,7 @@ export default {
         })
     },
     methods: {
-        handleSave: function() {
+        handleSave() {
             this.$store.commit('saveCharacterSpacing', {
                 lineHeight: this.lineHeight,
                 letterSpacing: this.letterSpacing
