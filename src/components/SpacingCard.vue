@@ -97,7 +97,7 @@ export default {
     }),
     computed: {
         ...mapState({
-            currentScale: state => state.currentScale,
+            currentScale: state => state.sizesCurrentScale,
             sizes: state => state.sizes,
             sizingText: state => state.sizingText
         })
