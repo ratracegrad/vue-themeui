@@ -38,25 +38,29 @@
 
             <div v-show="radioChoice === 'FontFile'">
                 <form enctype="multipart/form-data" novalidate>
-                    <div class="uploadWrapper">
-                        <label class="fileContainer">
-                            Select Fonts
-                            <input
-                                type="file"
-                                id="fontFile"
-                                ref="file"
-                                multiple
-                                accept=".ttf,.woff,.woff2,.otf"
-                                @change="getFiles"
-                            />
-                        </label>
-                    </div>
+                    <res-button design="primary"
+                        ><button>
+                            <div class="uploadWrapper">
+                                <res-icon name="upload"></res-icon>
+                                <label class="fileContainer">
+                                    Upload Fonts
+                                    <input
+                                        type="file"
+                                        id="fontFile"
+                                        ref="file"
+                                        multiple
+                                        accept=".ttf,.woff,.woff2,.otf"
+                                        @change="getFiles"
+                                    />
+                                </label>
+                            </div></button
+                    ></res-button>
                 </form>
             </div>
 
             <div v-show="radioChoice === 'URL'">
-                <form @submit.prevent="saveWebFont">
-                    <div>
+                <form @submit.prevent="saveWebFont" >
+                    <div style="display: flex; align-items: center;">
                         <res-input required :error="webfont.urlError">
                             <label for="webfontUrl">URL</label>
                             <input
@@ -65,9 +69,8 @@
                                 v-model="webfont.url"
                             />
                         </res-input>
-                    </div>
-                    <div>
-                        <res-input required :error="webfont.nameError">
+
+                        <res-input required :error="webfont.nameError" style="margin-left: 10px; margin-right: 10px;">
                             <label for="webfontName">Font Name:</label>
                             <input
                                 type="text"
@@ -75,8 +78,7 @@
                                 v-model="webfont.name"
                             />
                         </res-input>
-                    </div>
-                    <div class="spaceAbove">
+
                         <res-button design="primary"
                             ><button type="submit">Submit</button></res-button
                         >
@@ -312,16 +314,13 @@ export default {
     top: 0;
 }
 .fileContainer {
-    background: #ffe068;
-    border-radius: 5px;
     float: left;
-    padding: 10px 17px;
 }
 .fileContainer [type='file'] {
     cursor: pointer;
 }
 .uploadWrapper {
-    min-height: 25px;
+    min-height: 5px;
 }
 .totals {
     display: flex;
