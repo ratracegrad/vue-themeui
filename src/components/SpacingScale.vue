@@ -3,8 +3,9 @@
         <div>
             <res-table>
                 <label
-                    >Medium
+                    >{{ tab }}
                     <res-badge
+                        v-if="currentScale === tab"
                         design="gold"
                         size="smaller"
                         style="vertical-align: middle; margin-left: 8px;"
@@ -131,8 +132,24 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+
 export default {
-    name: 'SpacingScale'
+    name: 'SpacingScale',
+    props: {
+        tab: {
+            type: String,
+            required: true
+        }
+    },
+    data: () => ({
+        screenSize: 'phone'
+    }),
+    computed: {
+        ...mapState({
+            currentScale: state => state.spacingCurrentScale
+        })
+    }
 };
 </script>
 

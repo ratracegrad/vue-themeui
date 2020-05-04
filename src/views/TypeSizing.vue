@@ -1,7 +1,6 @@
 <template>
     <section class="l-content">
         <h2>Choose your type sizing</h2>
-
         <div>
             <p>
                 Scales affect your typography ttktktktktk. Scale choice is
@@ -12,10 +11,9 @@
         <p>
             Current scale: <strong>{{ currentScale }}</strong>
         </p>
-
         <div class="flex-center margin-lg">
             <res-select style="margin-right: 8px;">
-                <select name="s1" id="initial-id" v-model="selectedScale">
+                <select v-model="selectedScale">
                     <option value="" selected disabled>Select scale</option>
                     <option v-for="(value, key) in sizes" :key="key">{{
                         key
@@ -27,23 +25,12 @@
             >
         </div>
         <p class="margin-lg">preview scales below tktkt</p>
-
         <hr />
 
-        <div class="tabs">
-            <div class="tab is-tab-selected"></div>
-        </div>
-
         <v-tabs v-model="tab">
-            <v-tab>
-                Small
-            </v-tab>
-            <v-tab>
-                Medium
-            </v-tab>
-            <v-tab>
-                Large
-            </v-tab>
+            <v-tab v-for="(scale, scaleIdx) in scaleOptions" :key="scaleIdx">{{
+                scale
+            }}</v-tab>
 
             <v-tabs-items v-model="tab">
                 <v-tab-item transition="none" reverse-transition="none">
@@ -79,7 +66,8 @@ export default {
     }),
     computed: {
         ...mapState({
-            currentScale: state => state.currentScale,
+            currentScale: state => state.sizesCurrentScale,
+            scaleOptions: state => state.sizesScaleOptions,
             sizes: state => state.sizes
         })
     },
