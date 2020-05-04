@@ -1,5 +1,5 @@
 <template>
-    <section class="l-content">
+    <section class="l-content-colors">
         <h1>Color Palette</h1>
         <p>
             Each theme can have up to 6 brand colors. Each brand color has a
@@ -18,7 +18,7 @@
         ></ColorCard>
 
         <div class="margin-lg">
-            <res-button v-on:click="addColor" design="primary"
+            <res-button v-on:click="addColor" design="default"
                 ><res-icon name="add"></res-icon
                 ><button>Add a color</button></res-button
             >
