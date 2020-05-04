@@ -148,13 +148,13 @@ export default new Vuex.Store({
         },
         sizesScaleOptions: ['Small', 'Medium', 'Large'],
         sizingText: 'Almost before we knew it, we had left the ground.',
-        lineHeight: {
+        lineHeightDefault: {
             tight: '1.1',
             medium: '1.3',
             loose: '1.5',
             body: '1.7'
         },
-        letterSpacing: {
+        letterSpacingDefault: {
             default: '0',
             caps: '.04em',
             expressive: '.02em'
@@ -175,9 +175,9 @@ export default new Vuex.Store({
         saveCurrentScale(state, payload) {
             state.currentScale = payload;
         },
-        saveCharacterSpacing(state, payload) {
-            state.lineHeight = payload.lineHeight;
-            state.letterSpacing = payload.letterSpacing;
+        saveFontCharacterSpacing(state, payload) {
+            let idx = state.fonts.findIndex(item => item.name === payload.name);
+            state.fonts[idx] = payload;
         },
         saveCategories(state, payload) {
             state.categories = payload;

@@ -191,7 +191,9 @@ export default {
         ...mapState({
             fonts: state => state.fonts,
             baseURL: state => state.baseURL,
-            fontSizes: state => state.fontSizes
+            fontSizes: state => state.fontSizes,
+            lineHeightDefault: state => state.lineHeightDefault,
+            letterSpacingDefault: state => state.letterSpacingDefault
         })
     },
     mounted() {
@@ -236,7 +238,9 @@ export default {
             axios
                 .post(url, formData)
                 .then(() => {
-                    delete font.file; // save just name and size
+                    delete font.file; // remove file since no longer need it
+                    font.lineHeight = this.lineHeightDefault; // add defaults for new font
+                    font.letterSpacing = this.letterSpacingDefault; // add defaults for new font
                     this.$store.commit('addFont', font);
                 })
                 .catch(() => {
@@ -266,7 +270,9 @@ export default {
                 ) {
                     this.$store.commit('addFont', {
                         name: this.webfont.name,
-                        size: 1
+                        size: 1,
+                        lineHeight: this.lineHeightDefault,
+                        letterSpacing: this.letterSpacingDefault
                     });
                     this.clearWebfont();
                 } else {
