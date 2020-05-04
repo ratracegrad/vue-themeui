@@ -151,7 +151,9 @@
                     </div>
                     <span
                         style="font-size:12px; text-transform:uppercase; flex-basis: 75%;"
-                        v-bind:style="{ letterSpacing: font.letterSpacing.caps }"
+                        v-bind:style="{
+                            letterSpacing: font.letterSpacing.caps
+                        }"
                         >Lorem ipsum dolor sit amet, consectetur adipiscing
                         elit, sed do eiusmod tempor incididunt ut labore et
                         dolore magna aliqua.</span
