@@ -1,6 +1,9 @@
 <template>
     <div class="c-panel c-panel-typography" :id="font.name">
-        <h2 class="margin-lg line-height-reset">
+        <h2
+            class="margin-lg line-height-reset"
+            v-bind:style="{ fontFamily: font.name }"
+        >
             {{ font.name }}
         </h2>
 
