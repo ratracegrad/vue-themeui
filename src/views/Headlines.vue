@@ -42,13 +42,13 @@
                     ></res-select
                 >
             </div>
-            <res-button design="primary"
-                ><button>Save</button></res-button>
+            <res-button design="primary"><button>Save</button></res-button>
         </div>
 
-        <res-button design="primary"
+        <res-button design="default"
             ><res-icon name="add"></res-icon
-            ><button>Add a headline</button></res-button>
+            ><button>Add a headline</button></res-button
+        >
 
         <PrevNext :prevLink="'categories'" :nextLink="'body'"></PrevNext>
     </section>

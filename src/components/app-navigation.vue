@@ -83,28 +83,22 @@
                             v-bind:class="{ show: expandHeadings }"
                             class="tokens-list"
                         >
-
-                        <li class="sub sub-sub-sub">
-                            <router-link to="headlines"
-                                >Headlines</router-link
-                            >
-                        </li>
-                        <li class="sub sub-sub-sub">
-                            <router-link to="#"
-                                >Section Headings</router-link
-                            >
-                        </li>
-                        <li class="sub sub-sub-sub">
-                            <router-link to="#"
-                                >H1-H6</router-link
-                            >
-                        </li>
-                        <li class="sub sub-sub-sub">
-                            <router-link to="#"
-                                >Sub-headings</router-link
-                            >
-                        </li>
-
+                            <li class="sub sub-sub-sub">
+                                <router-link to="headlines"
+                                    >Headlines</router-link
+                                >
+                            </li>
+                            <li class="sub sub-sub-sub">
+                                <router-link to="#"
+                                    >Section Headings</router-link
+                                >
+                            </li>
+                            <li class="sub sub-sub-sub">
+                                <router-link to="#">H1-H6</router-link>
+                            </li>
+                            <li class="sub sub-sub-sub">
+                                <router-link to="#">Sub-headings</router-link>
+                            </li>
                         </div>
                         <li class="sub sub-sub">
                             <router-link to="body">Body</router-link>
@@ -164,7 +158,7 @@ export default {
             expandTypography: false,
             expandTokens: false,
             expandColors: false,
-            expandHeadings: false,
+            expandHeadings: false
         };
     },
     watch: {
