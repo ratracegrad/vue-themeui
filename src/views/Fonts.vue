@@ -59,7 +59,7 @@
             </div>
 
             <div v-show="radioChoice === 'URL'">
-                <form @submit.prevent="saveWebFont" >
+                <form @submit.prevent="saveWebFont">
                     <div style="display: flex; align-items: center;">
                         <res-input required :error="webfont.urlError">
                             <label for="webfontUrl">URL</label>
@@ -70,7 +70,11 @@
                             />
                         </res-input>
 
-                        <res-input required :error="webfont.nameError" style="margin-left: 10px; margin-right: 10px;">
+                        <res-input
+                            required
+                            :error="webfont.nameError"
+                            style="margin-left: 10px; margin-right: 10px;"
+                        >
                             <label for="webfontName">Font Name:</label>
                             <input
                                 type="text"
