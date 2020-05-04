@@ -195,6 +195,10 @@ p {
     padding-left: 68px;
 }
 
+.c-nav .sub-sub-sub a {
+    padding-left: 86px;
+}
+
 .c-nav .expandable {
     display: flex;
     align-items: center;
@@ -205,6 +209,10 @@ p {
 
 .c-nav .sub.expandable {
     padding-left: 42px;
+}
+
+.c-nav .sub.sub-sub.expandable {
+    padding-left: 68px;
 }
 
 .c-tabs {

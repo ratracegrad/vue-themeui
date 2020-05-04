@@ -45,11 +45,11 @@ const routes = [
             )
     },
     {
-        path: '/headings',
-        name: 'Headings',
+        path: '/headlines',
+        name: 'Headlines',
         meta: { typography: true, tokens: true, colors: false },
         component: () =>
-            import(/* webpackChunkName: "headings" */ '../views/Headings.vue')
+            import(/* webpackChunkName: "headlines" */ '../views/Headlines.vue')
     },
     {
         path: '/body',

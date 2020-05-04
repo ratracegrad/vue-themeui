@@ -64,9 +64,48 @@
                             >
                         </li>
 
-                        <li class="sub sub-sub">
-                            <router-link to="headings">Headings</router-link>
+                        <li
+                            class="sub sub-sub expandable"
+                            v-on:click="expandHeadings = !expandHeadings"
+                        >
+                            Headings<res-icon
+                                name="down"
+                                size="small"
+                                v-show="!expandHeadings"
+                            ></res-icon>
+                            <res-icon
+                                name="up"
+                                size="small"
+                                v-show="expandHeadings"
+                            ></res-icon>
                         </li>
+                        <div
+                            v-bind:class="{ show: expandHeadings }"
+                            class="tokens-list"
+                        >
+
+                        <li class="sub sub-sub-sub">
+                            <router-link to="headlines"
+                                >Headlines</router-link
+                            >
+                        </li>
+                        <li class="sub sub-sub-sub">
+                            <router-link to="#"
+                                >Section Headings</router-link
+                            >
+                        </li>
+                        <li class="sub sub-sub-sub">
+                            <router-link to="#"
+                                >H1-H6</router-link
+                            >
+                        </li>
+                        <li class="sub sub-sub-sub">
+                            <router-link to="#"
+                                >Sub-headings</router-link
+                            >
+                        </li>
+
+                        </div>
                         <li class="sub sub-sub">
                             <router-link to="body">Body</router-link>
                         </li>
@@ -124,7 +163,8 @@ export default {
         return {
             expandTypography: false,
             expandTokens: false,
-            expandColors: false
+            expandColors: false,
+            expandHeadings: false,
         };
     },
     watch: {
@@ -132,6 +172,7 @@ export default {
             this.expandTypography = route.meta.typography;
             this.expandTokens = route.meta.tokens;
             this.expandColors = route.meta.colors;
+            this.expandHeadings = route.meta.headings;
         }
     }
 };

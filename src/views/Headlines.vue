@@ -1,6 +1,6 @@
 <template>
     <section class="l-content">
-        <h1>Headings</h1>
+        <h1>Headlines</h1>
         <p>
             Headline styles are used for editorial story titles across the site,
             in many different components (eg Article and Feature Heads, Heroes,
@@ -10,26 +10,14 @@
             styles can be set for each theme. 2-3 is recommended.
         </p>
         <hr />
-        <h2>Heading 1</h2>
+        <h2>Headline 1</h2>
         <div class="c-panel">
             <div class="margin-sm">
                 <res-select
                     ><label>Font</label>
                     <select name="s1" id="initial-id"
-                        ><option placeholder="">font</option
-                        ><option value="">Default</option>
+                        ><option value="">Inherit from categories</option>
                         <option value="">Other Fonts</option></select
-                    ></res-select
-                >
-            </div>
-
-            <div class="margin-sm">
-                <res-select
-                    ><label>Font Weight</label>
-                    <select name="s1" id="initial-id"
-                        ><option placeholder="">font</option
-                        ><option value="">weight option 1</option>
-                        <option value="">weight option 2</option></select
                     ></res-select
                 >
             </div>
@@ -38,7 +26,6 @@
                 <res-select
                     ><label>Letterspacing</label>
                     <select name="s1" id="initial-id"
-                        ><option placeholder="">font</option
                         ><option value="">default</option>
                         <option value="">caps</option>
                         <option value="">expressive</option></select
@@ -50,13 +37,19 @@
                 <res-select
                     ><label>Text transform</label>
                     <select name="s1" id="initial-id"
-                        ><option placeholder="">font</option
                         ><option value="">none</option>
                         <option value="">uppercase</option></select
                     ></res-select
                 >
             </div>
+            <res-button design="primary"
+                ><button>Save</button></res-button>
         </div>
+
+        <res-button design="primary"
+            ><res-icon name="add"></res-icon
+            ><button>Add a headline</button></res-button>
+
         <PrevNext :prevLink="'categories'" :nextLink="'body'"></PrevNext>
     </section>
 </template>

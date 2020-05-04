@@ -76,7 +76,7 @@
 
         <SaveButton :enabled="true" v-on:save="handleSave"></SaveButton>
 
-        <PrevNext :prevLink="'typography'" :nextLink="'headings'"></PrevNext>
+        <PrevNext :prevLink="'typography'" :nextLink="'headlines'"></PrevNext>
     </section>
 </template>
 
