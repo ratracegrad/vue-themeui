@@ -224,7 +224,6 @@ export default {
             let t = this;
             reader.onload = function(e) {
                 let font = openType.parse(e.target.result);
-                console.log(font);
                 if (font.supported) {
                     t.upload({
                         name: font.names.fontFamily.en,
