@@ -21,10 +21,6 @@
                         {{ font.name }}
                     </a>
                 </span>
-                <!--                <span class="c-jump"><a href="#graphik">Graphik</a></span>-->
-                <!--                <span class="c-jump lora-regular"-->
-                <!--                    ><a href="#lora">Lora</a></span-->
-                <!--                >-->
             </p>
         </div>
         <hr />
@@ -33,9 +29,6 @@
             <CharacterSpacing :font="font" :id="font.name"></CharacterSpacing>
             <hr />
         </div>
-
-        <!--        <SaveButton :enabled="true" v-on:save="handleSave"></SaveButton>-->
-
         <hr />
 
         <PrevNext :prevLink="'typesizing'" :nextLink="'categories'"></PrevNext>
