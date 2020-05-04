@@ -11,7 +11,7 @@ export default new Vuex.Store({
             moderate: 1000000
         },
         fonts: [],
-        currentScale: 'small',
+        sizesCurrentScale: 'small',
         sizes: {
             small: {
                 phone: {
@@ -146,6 +146,7 @@ export default new Vuex.Store({
                 }
             }
         },
+        sizesScaleOptions: ['Small', 'Medium', 'Large'],
         sizingText: 'Almost before we knew it, we had left the ground.',
         lineHeight: {
             tight: '1.1',
@@ -164,7 +165,8 @@ export default new Vuex.Store({
             meta: 'Graphik-Regular',
             UI: 'Graphik-Regular'
         },
-        spacingCurrentScale: 'small'
+        spacingCurrentScale: 'Small',
+        spacingScaleOptions: ['Small', 'Medium', 'Large']
     },
     mutations: {
         addFont(state, font) {
