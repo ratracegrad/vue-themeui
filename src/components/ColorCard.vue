@@ -151,25 +151,30 @@
         </div>
 
         <div class="right margin-med">
-            <res-button design="default" res-modal-open="delete-color-modal"
+            <res-button
+                design="default"
+                :res-modal-open="'delete-color-modal' + this.colorID"
                 ><res-icon name="trash"></res-icon
                 ><button>Delete</button></res-button
             >
-            <res-modal id="delete-color-modal" close-on-bg-click="">
+            <res-modal
+                :id="'delete-color-modal' + this.colorID"
+                close-on-bg-click=""
+            >
                 <div>
                     <p style="margin-bottom: 1rem;">Delete {{ colorID }}?</p>
 
                     <res-button
                         id="modal-close"
                         design="secondary"
-                        res-modal-close="delete-color-modal"
+                        :res-modal-close="'delete-color-modal' + this.colorID"
                         v-on:click="handleDeleteClick"
                         ><button>Delete {{ colorID }}</button></res-button
                     >
 
                     <res-button
                         id="modal-close"
-                        res-modal-close="delete-color-modal"
+                        :res-modal-close="'delete-color-modal' + this.colorID"
                         style="margin-left: 1rem;"
                     >
                         <res-icon name="x"></res-icon
