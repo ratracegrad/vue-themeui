@@ -218,28 +218,6 @@ export default {
 </style>
 
 <style scoped>
-.align-center {
-    justify-content: center;
-}
-.c-color-card {
-    width: 100%;
-    margin-right: 10px;
-}
-
-.c-color-card--swatch-label {
-    margin-bottom: 4px;
-    font-weight: bold;
-}
-.c-color-card--swatch {
-    margin-right: 6px;
-    height: 175px;
-    width: 100px;
-}
-
-.main.c-color-card--swatch {
-    width: 175px;
-}
-
 svg g {
     stroke: #fff;
 }
@@ -253,23 +231,5 @@ input {
     font-size: 16px;
     margin-top: 10px;
     text-align: center;
-}
-
-.right {
-    text-align: right;
-}
-
-.v-color-picker {
-    position: absolute;
-    z-index: 10;
-    margin-top: 20px;
-}
-.c-show-picker {
-    width: 25px;
-    height: 25px;
-    margin-top: -10px;
-    box-sizing: border-box;
-    margin-left: -5px;
-    border: 3px solid #fff;
 }
 </style>
