@@ -474,5 +474,7 @@ p {
     margin: 0;
 }
 
-
+/*resonance required label is misaligned
+*/
+.res-input[required] .res-input__label:after { margin-top: 2px; }
 

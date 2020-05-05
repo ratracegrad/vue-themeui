@@ -60,8 +60,25 @@
 
             <div v-show="radioChoice === 'URL'">
                 <form @submit.prevent="saveWebFont">
-                    <div style="display: flex; align-items: center;">
-                        <res-input required :error="webfont.urlError">
+                    <div class="flex">
+                        <res-input
+                            required
+                            :error="webfont.nameError"
+                            style="margin-right: 10px;"
+                        >
+                            <label for="webfontName">Font Name</label>
+                            <input
+                                type="text"
+                                id="webfontName"
+                                v-model="webfont.name"
+                            />
+                        </res-input>
+
+                        <res-input
+                            required
+                            :error="webfont.urlError"
+                            style="margin-right: 10px;"
+                        >
                             <label for="webfontUrl">URL</label>
                             <input
                                 type="text"
@@ -70,20 +87,7 @@
                             />
                         </res-input>
 
-                        <res-input
-                            required
-                            :error="webfont.nameError"
-                            style="margin-left: 10px; margin-right: 10px;"
-                        >
-                            <label for="webfontName">Font Name:</label>
-                            <input
-                                type="text"
-                                id="webfontName"
-                                v-model="webfont.name"
-                            />
-                        </res-input>
-
-                        <res-button design="primary"
+                        <res-button design="primary" style="margin-top: 8px;"
                             ><button type="submit">Submit</button></res-button
                         >
                     </div>
