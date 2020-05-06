@@ -117,7 +117,7 @@
                     style="vertical-align: text-bottom;"
                 ></res-icon>
                 <span>&nbsp;</span>
-                <res-badge size="medium" :design="loadDesign"
+                <res-badge size="smaller" :design="loadDesign"
                     >Load Time: {{ loadTime }}</res-badge
                 >
             </div>
