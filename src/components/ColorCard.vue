@@ -2,7 +2,17 @@
     <div class="margin-lg c-color-card">
         <div class="flex c-color-card--swatches">
             <div class="col-30">
-                <h3>{{ colorID }}</h3>
+                <h3>
+                    {{ colorID }}
+                    <res-badge
+                        v-if="isPrimaryColor"
+                        style="margin-top: 10px;"
+                        size="smallest"
+                        design="sky"
+                    >
+                        <span>Primary</span></res-badge
+                    >
+                </h3>
                 <p>some descriptive txt here</p>
             </div>
             <div>
@@ -194,7 +204,7 @@
 <script>
 export default {
     name: 'ColorCard',
-    props: ['colorData', 'colorID'],
+    props: ['colorData', 'colorID', 'isPrimaryColor'],
     data() {
         return {
             isHiddenMain: true,

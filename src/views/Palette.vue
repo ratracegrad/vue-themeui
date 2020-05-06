@@ -7,6 +7,39 @@
             these colors together into modes.
         </p>
 
+        <p>
+            Your primary color informs the default colors in your system, and
+            should be your "brand" color. Don't worry, you'll be able to use
+            other colors later, as you set up modes and components. This will
+            just be used as a default so you don't have to specify everything.
+        </p>
+        <p
+            style="margin-bottom: 6px !important;
+    font-weight: bold;"
+        >
+            Primary Color
+        </p>
+        <div class="flex">
+            <res-select style="margin-right: 10px;"
+                ><select name="s1" id="initial-id" v-model="selectedColor"
+                    ><option placeholder="">Primary Color</option
+                    ><option
+                        v-for="card in cards"
+                        :value="card.id"
+                        :key="card.id"
+                        >{{ card.id }}</option
+                    ></select
+                ></res-select
+            >
+
+            <res-button
+                :disabled="selectedColor === savedPrimaryColor"
+                design="secondary"
+                v-on:click="setPrimary"
+                ><button>Set</button></res-button
+            >
+        </div>
+
         <hr />
 
         <ColorCard
@@ -14,6 +47,7 @@
             :key="card.id"
             :colorData="card.data"
             :colorID="card.id"
+            :isPrimaryColor="savedPrimaryColor === card.id"
             v-on:delete="deleteColor"
         ></ColorCard>
 
@@ -70,6 +104,8 @@ export default {
             newColorLight: '',
             newColorBright: '',
             newColorDark: '',
+            selectedColor: 'color1',
+            savedPrimaryColor: 'color1',
             cards: [
                 {
                     id: `color${colorCounter++}`,
@@ -98,6 +134,10 @@ export default {
             };
             this.cards.push(newColor);
             this.isHiddenPicker = true;
+        },
+        setPrimary: function() {
+            this.savedPrimaryColor = this.selectedColor;
+            console.log(this.savedPrimaryColor);
         },
         deleteColor: function(colorID) {
             let newList = [];
