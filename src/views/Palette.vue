@@ -67,7 +67,7 @@
                 v-if="!isHiddenPicker"
                 v-on:click="addColor"
                 design="secondary"
-                ><button>Generate Color</button></res-button
+                ><button>Generate color</button></res-button
             >
         </div>
         <hr />
