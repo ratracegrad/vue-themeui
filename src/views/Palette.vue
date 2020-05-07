@@ -104,7 +104,6 @@ export default {
     data: function() {
         return {
             opened: false,
-            isHiddenPicker: true,
             newColor: '',
             newColorFaded: '',
             newColorLight: '',

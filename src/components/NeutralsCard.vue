@@ -7,18 +7,7 @@
                     class="black c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.black }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.Black = !isHidden.Black"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.black }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.black"
-                        v-if="!isHidden.Black"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.black"></ColorPicker>
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -35,18 +24,8 @@
                     class="faded c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.gray80 }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.Gray80 = !isHidden.Gray80"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.gray80 }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.gray80"
-                        v-if="!isHidden.Gray80"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.gray80"></ColorPicker>
+
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -64,18 +43,8 @@
                     class="light c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.gray60 }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.Gray60 = !isHidden.Gray60"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.gray60 }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.gray60"
-                        v-if="!isHidden.Gray60"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.gray60"></ColorPicker>
+
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -93,18 +62,8 @@
                     class="bright c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.gray50 }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.Gray50 = !isHidden.Gray50"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.gray50 }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.gray50"
-                        v-if="!isHidden.Gray50"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.gray50"></ColorPicker>
+
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -122,18 +81,8 @@
                     class="dark c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.gray40 }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.Gray40 = !isHidden.Gray40"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.gray40 }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.gray40"
-                        v-if="!isHidden.Gray40"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.gray40"></ColorPicker>
+
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -151,18 +100,8 @@
                     class="dark c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.gray20 }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.Gray20 = !isHidden.Gray20"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.gray20 }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.gray20"
-                        v-if="!isHidden.Gray20"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.gray20"></ColorPicker>
+
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -180,18 +119,8 @@
                     class="dark c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.gray10 }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.Gray10 = !isHidden.Gray10"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.gray10 }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.gray10"
-                        v-if="!isHidden.Gray10"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.gray10"></ColorPicker>
+
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -209,18 +138,8 @@
                     class="dark c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.gray05 }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.Gray05 = !isHidden.Gray05"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.gray05 }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.gray05"
-                        v-if="!isHidden.Gray05"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.gray05"></ColorPicker>
+
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -238,18 +157,8 @@
                     class="dark c-color-card--swatch"
                     v-bind:style="{ backgroundColor: neutrals.white }"
                 ></div>
-                <div class="flex align-center">
-                    <button
-                        v-on:click="isHidden.White = !isHidden.White"
-                        class="c-show-picker"
-                        v-bind:style="{ backgroundColor: neutrals.white }"
-                    ></button>
-                    <v-color-picker
-                        v-model="neutrals.White"
-                        v-if="!isHidden.White"
-                        width="250"
-                    ></v-color-picker>
-                </div>
+                <ColorPicker v-model="neutrals.white"></ColorPicker>
+
                 <div class="flex align-center">
                     <input
                         type="text"
@@ -269,8 +178,13 @@
 </template>
 
 <script>
+import ColorPicker from '@/components/ColorPicker';
+
 export default {
     name: 'NeutralsCard',
+    components: {
+        ColorPicker
+    },
     data: () => ({
         neutrals: {
             black: '#000000',
