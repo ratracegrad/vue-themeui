@@ -65,10 +65,10 @@
                 ><button>Generate color</button></res-button
             >
             <v-color-picker
+                id="picker--generate-color"
                 v-show="opened"
                 width="275"
                 @update:color="pickColor"
-                id="picker--generate-color"
             ></v-color-picker>
         </div>
         <hr />

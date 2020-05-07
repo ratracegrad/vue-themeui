@@ -353,6 +353,10 @@ p {
     position: absolute;
     z-index: 10;
     margin-top: 20px;
+    border: 8px solid #fff;
+    background-clip: border-box;
+    background-clip: padding-box;
+    background-clip: content-box;
 }
 .c-show-picker {
     width: 25px;
@@ -362,8 +366,6 @@ p {
     margin-left: -5px;
     border: 3px solid #fff;
 }
-
-
 /*margin helpers
 */
 
