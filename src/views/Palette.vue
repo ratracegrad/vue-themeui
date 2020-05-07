@@ -143,6 +143,12 @@ export default {
             let newList = [];
 
             for (let i = 0; i < this.cards.length; i++) {
+                if (this.cards.length === 1) {
+                    alert(
+                        "You must have at least one color in your palette, you can't delete this one!"
+                    );
+                    return;
+                }
                 if (this.cards[i].id !== colorID) {
                     newList.push(this.cards[i]);
                 }
