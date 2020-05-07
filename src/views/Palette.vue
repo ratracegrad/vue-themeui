@@ -13,6 +13,7 @@
             other colors later, as you set up modes and components. This will
             just be used as a default so you don't have to specify everything.
         </p>
+
         <p
             style="margin-bottom: 6px !important;
     font-weight: bold;"
@@ -53,22 +54,21 @@
 
         <div class="margin-lg">
             <res-button
-                v-on:click="isHiddenPicker = !isHiddenPicker"
+                v-click-outside="hide"
+                @click="toggle"
                 design="default"
+                v-show="!opened"
                 ><res-icon name="add"></res-icon
                 ><button>Add a color</button></res-button
             >
+            <res-button v-show="opened" v-on:click="addColor" design="secondary"
+                ><button>Generate color</button></res-button
+            >
             <v-color-picker
-                v-if="!isHiddenPicker"
+                v-show="opened"
                 width="275"
                 @update:color="pickColor"
             ></v-color-picker>
-            <res-button
-                v-if="!isHiddenPicker"
-                v-on:click="addColor"
-                design="secondary"
-                ><button>Generate color</button></res-button
-            >
         </div>
         <hr />
 
@@ -86,6 +86,7 @@ import PrevNext from '@/components/PrevNext';
 import ColorCard from '@/components/ColorCard';
 import NeutralsCard from '@/components/NeutralsCard';
 import colorConvert from 'color-convert';
+import clickOutside from 'vue-click-outside';
 
 let colorCounter = 1;
 
@@ -96,8 +97,12 @@ export default {
         ColorCard,
         NeutralsCard
     },
+    directives: {
+        clickOutside
+    },
     data: function() {
         return {
+            opened: false,
             isHiddenPicker: true,
             newColor: '',
             newColorFaded: '',
@@ -120,7 +125,17 @@ export default {
             ]
         };
     },
+    mounted() {
+        // prevent click outside event with popupItem.
+        // this.popupItem = this.$el
+    },
     methods: {
+        toggle() {
+            this.opened = true;
+        },
+        hide() {
+            this.opened = false;
+        },
         addColor: function() {
             let newColor = {
                 id: `color${colorCounter++}`,
