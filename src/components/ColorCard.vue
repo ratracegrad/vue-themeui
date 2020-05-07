@@ -106,7 +106,7 @@
             </div>
         </div>
 
-        <div class="right margin-med">
+        <div class="right">
             <res-button
                 design="default"
                 :res-modal-open="'delete-color-modal' + this.colorID"
