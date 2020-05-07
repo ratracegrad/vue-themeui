@@ -68,6 +68,7 @@
                 v-show="opened"
                 width="275"
                 @update:color="pickColor"
+                id="picker--generate-color"
             ></v-color-picker>
         </div>
         <hr />
@@ -127,7 +128,7 @@ export default {
     },
     mounted() {
         // prevent click outside event with popupItem.
-        // this.popupItem = this.$el
+        this.popupItem = document.getElementById('picker--generate-color');
     },
     methods: {
         toggle() {
