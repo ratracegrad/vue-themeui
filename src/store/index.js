@@ -184,6 +184,11 @@ export default new Vuex.Store({
         },
         saveSpacingScale(state, payload) {
             state.spacingCurrentScale = payload;
+        },
+        removeFont(state, payload) {
+            state.fonts = state.fonts.filter(f => {
+                return f.name !== payload;
+            });
         }
     },
     actions: {},

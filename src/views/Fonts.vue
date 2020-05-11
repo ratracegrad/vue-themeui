@@ -97,7 +97,11 @@
         <div v-if="totalSize > 0">
             <hr />
             <h3>Uploaded Fonts</h3>
-            <p v-for="(font, fontIdx) in fonts" :key="fontIdx">
+            <p
+                v-for="(font, fontIdx) in fonts"
+                :key="fontIdx"
+                v-bind:style="{ fontFamily: font.name }"
+            >
                 {{ font.name }} - ({{ font.size | kb }})
                 <res-icon
                     res-modal-open="deleteFont"
@@ -129,7 +133,7 @@
         <PrevNext :prevLink="'index'" :nextLink="'typesizing'"></PrevNext>
 
         <res-modal id="deleteFont" close-on-bg-click="">
-            <div>
+            <div v-if="fonts.length > 1">
                 <p style="margin-bottom: 1rem;">Delete {{ deleteFont }}?</p>
                 <res-button
                     @click="removeFont"
@@ -138,6 +142,19 @@
                     res-modal-close="deleteFont"
                     ><button>Delete font</button></res-button
                 >
+                <res-button
+                    @click="deleteFont = ''"
+                    id="modal-close"
+                    res-modal-close="deleteFont"
+                    style="margin-left: 1rem;"
+                >
+                    <res-icon name="x"></res-icon
+                    ><button>Cancel</button></res-button
+                >
+            </div>
+
+            <div v-else>
+                <p style="margin-bottom: 1rem;">Cannot delete the last font.</p>
                 <res-button
                     @click="deleteFont = ''"
                     id="modal-close"
@@ -258,9 +275,7 @@ export default {
                 });
         },
         removeFont() {
-            this.fonts = this.fonts.filter(f => {
-                return f.name !== this.deleteFont;
-            });
+            this.$store.commit('removeFont', this.deleteFont);
             this.deleteFont = '';
         },
         saveWebFont() {
