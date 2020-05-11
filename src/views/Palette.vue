@@ -152,7 +152,6 @@ export default {
         },
         setPrimary: function() {
             this.savedPrimaryColor = this.selectedColor;
-            console.log(this.savedPrimaryColor);
         },
         deleteColor: function(colorID) {
             let newList = [];
